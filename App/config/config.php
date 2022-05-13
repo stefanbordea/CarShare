@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'stefan');
 define('DB_PASS', 'secret');
-define('DB_NAME', 'carshare');
+define('DB_NAME', 'carShare');
 
 //APPROOT
 define('APPROOT', dirname(dirname(__FILE__)));
