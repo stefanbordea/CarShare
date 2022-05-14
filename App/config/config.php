@@ -7,7 +7,7 @@ define('DB_NAME', 'carShare');
 
 //if true, errors will be displayed in the browser,
 //else they will be saved in a log file
-define('SHOW_ERRORS', false);
+define('SHOW_ERRORS', true);
 
 //APPROOT
 define('APPROOT', dirname(dirname(__FILE__)));

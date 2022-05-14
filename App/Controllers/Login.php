@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Core\View;
+use \App\Models\User;
 
 class Login extends \Core\Controller
 {
@@ -25,6 +26,15 @@ class Login extends \Core\Controller
         View::render('Login/login.php');
     }
 
+
+    public function createAction(){
+        $user = User::authenticate($_POST['email'], $_POST['password']);
+        if($user){
+            $this->redirect('/');
+        } else{
+            View::render('Login/login.php');
+        }
+    }
 
 
 }
