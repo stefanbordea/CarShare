@@ -3,7 +3,7 @@ require_once '../App/config/config.php';
 //echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
 
 //Require the controller class
-//require '../App/Controllers/Listings.php';
+//require '../App/Controllers/index.php';
 
 
 //Routing
@@ -17,6 +17,10 @@ spl_autoload_register(function ($class) {
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
     }
 });
+
+error_reporting(E_ALL);
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
 
 
 

@@ -4,21 +4,14 @@ namespace App\Models;
 
 use PDO;
 
-class Listing
+class Listing extends \Core\Model
 {
     #Get all the listings as an associative array
     public static function getAll(){
-        $host = "localhost";
-        $db_name = "carShare";
-        $user = "stefan";
-        $password = "secret";
 
         try{
-            $db = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8",
-            $user, $password
-            );
-
-            $stmt = $db->query('SELECT * from User');
+            $db = static::getDB();
+            $stmt = $db->query('SELECT * from Listing');
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } catch(PDOException $e){
