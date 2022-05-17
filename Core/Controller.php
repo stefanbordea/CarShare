@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use App\Authentication;
+
 abstract class Controller
 {
     #Parameters from the matched route
@@ -37,5 +39,12 @@ abstract class Controller
     public function redirect($url){
         header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);
         exit;
+    }
+
+    public function requireLogin(){
+        if(!Authentication::isLoggedIn()){
+            Authentication::rememberRequestedPage();
+            $this->redirect('/login');
+        }
     }
 }

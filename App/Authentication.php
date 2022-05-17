@@ -7,6 +7,7 @@ class Authentication
     public static function login($user){
         session_regenerate_id(true);
         $_SESSION['user_id'] = $user->ID;
+        $_SESSION['user_email'] = $user->email;
     }
 
     public static function logout(){
@@ -34,5 +35,13 @@ class Authentication
 
     public static function isLoggedIn(){
         return isset($_SESSION['user_id']);
+    }
+
+    public static function rememberRequestedPage(){
+        $_SESSION['return_to'] = $_SERVER['REQUEST_URI'];
+    }
+
+    public static function getReturnPage(){
+        return $_SESSION['return_to'] ?? '/';
     }
 }

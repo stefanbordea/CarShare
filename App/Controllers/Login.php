@@ -32,7 +32,7 @@ class Login extends \Core\Controller
         $user = User::authenticate($_POST['email'], $_POST['password']);
         if($user){
             Authentication::login($user);
-            $this->redirect('/');
+            $this->redirect(Authentication::getReturnPage());
         } else{
             View::render('Login/login.php');
         }
