@@ -17,3 +17,8 @@ define('URLROOT', 'localhost/carShare');
 
 //Sitename
 define('SITENAME', 'Car Share');
+
+const SECRET_KEY = '';
+
+const MAILGUN_API_KEY = '';
+const MAILGUN_DOMAIN = '';
