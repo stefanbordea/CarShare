@@ -15,4 +15,6 @@ require '../App/Views/common/navigation.php';
     </div>
 
     <button type="submit">Log in</button>
+
+    <a href="../Password/forgot">Forgot your password?</a>
 </form>
