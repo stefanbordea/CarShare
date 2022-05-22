@@ -18,9 +18,24 @@ class Listings extends \Core\Controller
         ]);
     }
 
+    public function listingFormAction() {
+        $this->requireLogin();
+        View::render('Listings/listingForm.php');
+    }
+
     #Show the add new listing page
     public function addNewAction(){
-        echo "Hello from the addNew action in the Listings controller";
+//        echo "Hello from the addNew action in the Listings controller";
+        $listing = new Listing($_POST);
+        if($listing->save()) {
+            //also car needs to be available
+            $this->redirect('/listings/successfulListing');
+        }
+
+    }
+
+    public function successfulListingAction() {
+        View::render('Listings/successfulListing.php');
     }
 
     public function editAction(){
