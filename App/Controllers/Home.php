@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Mail;
 use \Core\View;
 
 class Home extends \Core\Controller
