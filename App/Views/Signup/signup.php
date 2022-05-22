@@ -50,7 +50,7 @@ if(!empty($user->errors)){
                                 <button class="btn btn-primary">Sign up</button>
                                 <br>
                                 <br>
-                                <a href="../Password/forgot" class="link">Forgot password?</a>
+                                <a href="../Login/login" class="link">Already have an account? Login!</a>
                             </div>
                         </form>
                     </div>
