@@ -5,7 +5,7 @@ namespace App\Controllers;
 use \Core\View;
 use App\Models\Listing;
 
-class Listings extends \Core\Controller
+class Listings extends Authenticated
 {
     #Show the index page
     public function indexAction(){
@@ -19,7 +19,6 @@ class Listings extends \Core\Controller
     }
 
     public function listingFormAction() {
-        $this->requireLogin();
         View::render('Listings/listingForm.php');
     }
 
