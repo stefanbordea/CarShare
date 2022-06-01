@@ -1,3 +1,58 @@
-h1 {
-    border: 10px solid red;
+
+.navbar {
+
+    background-color: rgb(27, 23, 37);
+    background-image: -moz-linear-gradient()
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 26px;
+    text-align: justify;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-item {
+    font-size: 26px;
+    margin-right: 13px;
+}
+
+.nav-image {
+    display: block;
+    padding-top: 2px;
+    width: 40px;
+    height: 40px;
+
+}
+
+.container{
+
+   
+}
+
+.carousel {
+
+    align-content: center;
+    justify-content: center;
+    margin-left: 300px;
+    margin-right: 400px;
+
+}
+
+.carousel-inner .carousel-item img {
+    height: 500px;
+    width: 800px;
+}
+
+.card{
+    margin-top: 40px;
+    width: 310px; 
+    height: 345px;
+   margin-left:30px;
+   border-radius: 5%;
+
+
 }
