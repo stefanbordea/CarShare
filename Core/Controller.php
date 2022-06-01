@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use App\Authentication;
+
 abstract class Controller
 {
     #Parameters from the matched route
@@ -21,7 +23,8 @@ abstract class Controller
                 $this->after();
             }
         }else{
-            echo "Method $method not found in controller " . get_class($this);
+//            echo "Method $method not found in controller " . get_class($this);
+            throw new \Exception("Method $method not found in controller " . get_class($this));
         }
     }
 
@@ -31,5 +34,17 @@ abstract class Controller
 
     protected function after(){
 
+    }
+
+    public function redirect($url){
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);
+        exit;
+    }
+
+    public function requireLogin(){
+        if(!Authentication::isLoggedIn()){
+            Authentication::rememberRequestedPage();
+            $this->redirect('/login');
+        }
     }
 }

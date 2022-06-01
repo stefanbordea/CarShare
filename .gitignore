@@ -1,0 +1,6 @@
+.idea/
+vendor/
+composer.lock
+composer.phar
+composer.json
+App/config/config.php

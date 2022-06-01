@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use \Core\View;
+use \App\Models\User;
 
 class Signup extends \Core\Controller
 {
@@ -24,4 +25,20 @@ class Signup extends \Core\Controller
         View::render('Signup/signup.php');
     }
 
+    public function createAction()
+    {
+        $user = new User($_POST);
+
+        if($user->save()){
+            $this->redirect('/signup/success');
+        } else{
+            View::render('Signup/signup.php', [
+               'user' => $user
+            ]);
+        }
+    }
+
+    public function successAction(){
+        View::render('Signup/success.php');
+    }
 }
