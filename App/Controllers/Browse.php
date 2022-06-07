@@ -23,14 +23,13 @@ class Browse extends \Core\Controller
     }
 
     public function browseAction(){
-        //echo "Hello from the index action in the Home controller";
-        View::render('Browse/browse.php');
 
-//        $listings = Listing::getAll();
-//
-//        View::renderTemplate('Browse/browse.php', [
-//            'listings' => $listings
-//        ]);
+
+        $listings = Listing::getAll();
+
+        View::render('Browse/browse.php', [
+            'listings' => $listings
+        ]);
     }
 
 }

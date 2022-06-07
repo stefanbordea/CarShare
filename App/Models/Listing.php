@@ -16,8 +16,8 @@ class Listing extends \Core\Model
 
     public function save() {
         $userID = $_SESSION['user_id'];
-        $sql = 'INSERT INTO listing (userID, vehicleID, description, pricePerDay, pickupLocation, returnLocation)
-                VALUES (:userID, :vehicleID, :description, :pricePerDay, :pickupLocation, :returnLocation)';
+        $sql = 'INSERT INTO listing (userID, vehicleID, description, pricePerDay, pickupLocation, returnLocation, photoLink)
+                VALUES (:userID, :vehicleID, :description, :pricePerDay, :pickupLocation, :returnLocation, :photoLink)';
         $db = static::getDB();
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':userID', $userID, PDO::PARAM_INT);
@@ -26,6 +26,7 @@ class Listing extends \Core\Model
         $stmt->bindValue(':pricePerDay', $this->pricePerDay, PDO::PARAM_INT);
         $stmt->bindValue(':pickupLocation', $this->pickupLocation, PDO::PARAM_STR);
         $stmt->bindValue(':returnLocation', $this->returnLocation, PDO::PARAM_STR);
+        $stmt->bindValue(':photoLink', $this->photoLink, PDO::PARAM_STR);
 
         return $stmt->execute();
     }
