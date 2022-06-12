@@ -33,10 +33,10 @@ body{
     padding:0;
 }
 
-.form-control{
-    width:30%;
-    margin:0 auto;
-}
+/*.form-control{*/
+/*    width:30%;*/
+/*    margin:0 auto;*/
+/*}*/
 .formLabel{
     display:block;
     text-align:center;
