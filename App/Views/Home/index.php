@@ -51,7 +51,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
     <div class="row g-3">
       <!--1ST CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
+        <div class="card" id="homeCards">
           <img class="card-img-top" src="/images/city.jpg" alt="City cars" style="height:180px;">
           <div class="card-body">
             <h4 class="card-title">City</h4>
@@ -62,7 +62,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
       </div>
       <!--2ND CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
+      <div class="card" id="homeCards">
           <img class="card-img-top" src="/images/long-range.jpg" alt="Long-range cars" style="height:180px;">
           <div class="card-body">
             <h4 class="card-title">Long-range</h4>
@@ -73,7 +73,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
       </div>
       <!--3RD CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
+      <div class="card" id="homeCards">
           <img class="card-img-top" src="/images/flex.jpg" alt="Luxury cars" style="height:180px;">
           <div class="card-body">
             <h4 class="card-title">Lux</h4>
