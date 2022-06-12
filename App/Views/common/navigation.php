@@ -11,7 +11,7 @@
 
                 <div class="text-end">
                     <?php if(isset($_SESSION['user_id'])) { ?>
-                        <a href="/Profiles/profile"><button type="button" class="btn btn-outline-light me-2">Profile</button></a>
+                        <a href="/Profile/profile"><button type="button" class="btn btn-outline-light me-2">Profile</button></a>
                         <a href="/logout"><button type="button" class="btn btn-outline-light">Log out</button></a>
                     <?php } else{ ?>
                         <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
