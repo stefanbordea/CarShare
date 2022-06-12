@@ -1,20 +1,93 @@
-.login-title{
+.carousel {
+
+    align-content: center;
+    justify-content: center;
+    margin-left: 400px;
+    margin-right: 400px;
+
+}
+
+.carousel-inner .carousel-item img {
+    height: 500px;
+    width: 750px;
+}
+
+.card {
+    margin-top: 40px;
+    width: 310px;
+    height: 345px;
+    margin-left: 30px;
+    border-radius: 5%;
+
+}
+
+.login-title {
     padding-top: 1em;
     text-align: center;
     margin-bottom: -1em;
 }
 
-.bg-dark{
+.bg-dark {
     background-color: #1B1725 !important;
 }
 
 .btn-warning,
-.btn-primary{
+.btn-primary {
     background-color: #B3B3F1 !important;
     border-color: #B3B3F1 !important;
 }
 
-.link{
-    color: #6A66A3
-    !important;
+.link {
+    color: #6A66A3 !important;
+}
+
+#termsBody {
+
+    /* background-color: #6d69a5; */
+    border-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#termsHeader {
+    color: #2a243a;
+    /* text-align: center; */
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+
+}
+
+
+h3#Intro,
+h3#Cookies,
+h3#License,
+h3#Hyperlink,
+h3#iFrames,
+h3#ContentLiability,
+h3#Privacy,
+h3#Disclaimer {
+    /* color: white; */
+    /* text-align: center; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#termsBody p {
+    /* color: white; */
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#termsNavbar .container-fluid .navbar-nav>li>a {
+    color: white;
+    margin-right: 15px;
+}
+
+#termsNavbar .container-fluid .navbar-nav>li>a:hover {
+    color: #B3B3F1;
+
 }
