@@ -12,17 +12,19 @@ require '../App/Views/common/navigation.php';
 
 
     <?php foreach ($listings as $listing)  {
+        $url = "/Listings/index?id=".$listing['vehicleID'];
      ?>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" method="GET" >
         <img src="../images/<?php echo  $listing['photoLink']?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php echo $vehicles[$listing['vehicleID']]['brand'] . ' ' . $vehicles[$listing['vehicleID']]['model'] ?></h5>
             <p class="card-text"><?php echo 'Price per day : ' . $listing['pricePerDay'] . '€<br>'.
                                             'Pickup : ' . $listing['pickupLocation'] .' <br>'.
                                             'Return : ' . $listing['returnLocation']?></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="<?php echo $url;?>" class="btn btn-primary">More Details</a>
         </div>
     </div>
+
     <?php
     }
     ?>

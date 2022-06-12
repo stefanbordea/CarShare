@@ -151,3 +151,36 @@ body{
 /*--------- FOOTER------------- */
 
 /*!**************************!*/
+
+/*----------BROWSE INDEX ----------*/
+.listingImage {
+    width:50%;
+    margin:0 auto;
+    padding-top: 1em;
+}
+#browseContainer{
+    /*width:50%;*/
+    padding-bottom: 2.5rem;
+}
+#listingTitle{
+    margin:0 auto;
+    text-align: center;
+    padding-top:2em;
+}
+#firstColumnListing{
+    text-align: right;
+}
+
+.listingInfo{
+    margin-top:2em;
+}
+
+.last{
+    margin-bottom:10em;
+}
+
+.date{
+    padding-top:0.7em;
+    padding-bottom:0.7em;
+}
+

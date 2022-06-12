@@ -33,7 +33,6 @@ class Browse extends \Core\Controller
         foreach ($listings as $listing) {
             $vehicles[$listing['vehicleID']] = Vehicle::getVehicleByID($listing['vehicleID']);
         }
-
         View::render('Browse/browse.php', [
             'listings' => $listings,
             'vehicles' => $vehicles
