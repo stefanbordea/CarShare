@@ -23,7 +23,7 @@ class Browse extends \Core\Controller
         //echo " (after)";
     }
 
-    public function browseAction($listings = null){
+    public function browseAction($listings = null, $query = null){
 
         //if the function is called from the navigation no parameter is provided, so default value is applied
         //and all listings should be shown
@@ -44,11 +44,12 @@ class Browse extends \Core\Controller
 
         View::render('Browse/browse.php', [
             'listings' => $listings,
-            'vehicles' => $vehicles
+            'vehicles' => $vehicles,
+            'qry' => $query
         ]);
     }
 
-    public function searchListings() {
+    public function searchListingsAction() {
         $query = $_GET['query'];
         $query = htmlspecialchars($query);
         // changes characters used in html to their equivalents, for example: < to &gt;
@@ -56,7 +57,8 @@ class Browse extends \Core\Controller
         if ($listings == null) {
             $listings = -1;
         }
-        $this->browseAction($listings);
+        //The query is passed to browseAction for pagination of results
+        $this->browseAction($listings, $query);
 
     }
 
