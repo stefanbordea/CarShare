@@ -1,7 +1,7 @@
 <?php
 //Database params
 define('DB_HOST', 'localhost');
-define('DB_USER', 'daniel');
+define('DB_USER', 'dionisis');
 define('DB_PASS', 'secret');
 define('DB_NAME', 'carShare');
 
