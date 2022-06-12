@@ -5,3 +5,4 @@ composer.phar
 composer.json
 App/config/config.php
 /public/images/
+App/config/config.php
