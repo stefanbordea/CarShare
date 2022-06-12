@@ -4,7 +4,7 @@ require '../App/Views/common/navigation.php';
 
 ?>
 <h1>Create Listing</h1>
-<form action="/listings/addNew" method="post">
+<form action="/listings/addNew" method="post" enctype="multipart/form-data">
     <div>
         <label for="vehicleID">Vehicle ID</label>
         <input type="number" id="vehicleID" min="0" name="vehicleID">
@@ -28,6 +28,11 @@ require '../App/Views/common/navigation.php';
     <div>
         <label for="returnLocation">Return location</label>
         <input type="text" id="returnLocation" name="returnLocation" placeholder="Return location">
+    </div>
+
+    <div>
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="image">
     </div>
 
     <button type="submit">Submit</button>
