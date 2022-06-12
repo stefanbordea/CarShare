@@ -11,8 +11,13 @@
 
 
                 <div class="text-end">
-                    <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                    <a href="/Signup/signup"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                    <?php if(isset($_SESSION['user_id'])) { ?>
+                        <a href="/Profile/profile"><button type="button" class="btn btn-outline-light me-2">Profile</button></a>
+                        <a href="/logout"><button type="button" class="btn btn-outline-light">Log out</button></a>
+                    <?php } else{ ?>
+                        <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                        <a href="/Signup/signup"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                    <?php }?>
                 </div>
             </div>
         </div>
