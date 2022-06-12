@@ -4,7 +4,7 @@ namespace App\Models;
 
 use PDO;
 
-class Profile extends \Core\Model
+class ProfileModel extends \Core\Model
 {
 
     public function __construct($data = [])
@@ -19,7 +19,7 @@ class Profile extends \Core\Model
 
         try{
             $db = static::getDB();
-            $stmt = $db->query('SELECT * from user ');
+            $stmt = $db->query('SELECT * from User ');
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } catch(PDOException $e){
@@ -48,7 +48,7 @@ class Profile extends \Core\Model
 
         try{
             $db = static::getDB();
-            $stmt = $db->query('SELECT * from license WHERE userID = '.$_SESSION['user_id']);
+            $stmt = $db->query('SELECT * from License WHERE userID = '.$_SESSION['user_id']);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } catch(PDOException $e){
