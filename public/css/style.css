@@ -1,3 +1,4 @@
+/*HOME PAGE STYLING*/
 .carousel {
 
     align-content: center;
@@ -41,6 +42,45 @@
     color: #6A66A3 !important;
 }
 
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: #1B1725;
+    color: white;
+    padding: 0 35px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    transition: 400ms;
+
+
+}
+
+.cookie-container.active{
+    bottom:0;
+
+}
+
+.cookie-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.cookie-btn {
+    font-size: 14px;
+    color: white;
+    background-color: #736fb0;
+    cursor: pointer;
+    border-top: 2px;
+    margin-left: 15px;
+    border: 0;
+    border-radius: 9px;
+
+}
+
+
+/*TERMS PAGE*/
 #termsBody {
 
     /* background-color: #6d69a5; */

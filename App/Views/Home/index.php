@@ -1,18 +1,19 @@
 <?php
-    require '../App/Views/common/head.php';
-    require '../App/Views/common/navigation.php';
-    use App\Authentication;
+require '../App/Views/common/head.php';
+require '../App/Views/common/navigation.php';
+
+use App\Authentication;
 
 ?>
 
 
 <?php
-    if(Authentication::isLoggedIn()):
+if (Authentication::isLoggedIn()) :
 ?>
-User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/logout">Log out</a>.
+  User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/logout">Log out</a>.
 
-<?php else: ?>
-<a href="/signup">Sign up</a> or <a href="/login">Log in</a>.
+<?php else : ?>
+  <a href="/signup">Sign up</a> or <a href="/login">Log in</a>.
 
 <?php endif; ?>
 
@@ -20,6 +21,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
 <!-- CAROUSEL-->
 <!---------------------->
 
+<html>
 <body>
 
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -62,7 +64,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
       </div>
       <!--2ND CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
-      <div class="card" id="homeCards">
+        <div class="card" id="homeCards">
           <img class="card-img-top" src="/images/long-range.jpg" alt="Long-range cars" style="height:180px;">
           <div class="card-body">
             <h4 class="card-title">Long-range</h4>
@@ -73,7 +75,7 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
       </div>
       <!--3RD CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
-      <div class="card" id="homeCards">
+        <div class="card" id="homeCards">
           <img class="card-img-top" src="/images/flex.jpg" alt="Luxury cars" style="height:180px;">
           <div class="card-body">
             <h4 class="card-title">Lux</h4>
@@ -84,5 +86,14 @@ User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/l
       </div>
     </div>
   </div>
+  <div class="cookie-container">
+    <p> We use cookies to deliver our services. By continuing on this website, you have agreed to our cookie policy. To learn more, read our
+      <a href="Privacy/privacy">privacy policy</a>
+      and <a href="Terms/terms">
+        Terms and Conditions </a>
+      <button type="button" class="cookie-btn">Confirm</button>
+    </p>
   </div>
+  <script src="/cookie.js"></script>
 </body>
+</html>
