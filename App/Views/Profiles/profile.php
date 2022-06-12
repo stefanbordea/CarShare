@@ -45,7 +45,7 @@ use App\Authentication;
                         Date Of Birth:
                     </div>
                     <div class="col-md-6" id="secondColumn">
-                        <?php echo $license['dateOfBirth'];  endforeach; ?>
+                        <?php echo $lisence['dateOfBirth'];  endforeach; ?>
                     </div>
 
                 </div>
