@@ -25,4 +25,7 @@ require '../App/Views/common/navigation.php';
     </div>
     <?php
     }
+    if ($listings == []) {
+        echo 'No matching listings were found';
+    }
     ?>
