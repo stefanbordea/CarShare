@@ -8,7 +8,7 @@
                     <li><a href="/Browse/browse" class="nav-link px-2 text-white">Browse</a></li>
                     <li><a href="/About/about" class="nav-link px-2 text-white">About</a></li>
                 </ul>
-                <a href="/Listings/listingForm"><button type="button" class="btn btn-outline-light me-2 listingButton">Create a Listing</button></a>
+                <a href="/Vehicles/vehicleForm"><button type="button" class="btn btn-outline-light me-2 listingButton">Create a Listing</button></a>
 
                 <div class="text-end">
                     <?php if(isset($_SESSION['user_id'])) { ?>
