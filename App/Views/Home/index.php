@@ -91,6 +91,6 @@ if (Authentication::isLoggedIn()) :
       <button type="button" class="cookie-btn">Confirm</button>
     </p>
   </div>
-  <script src="/cookie.js"></script>
+  <script src="/js/cookie.js"></script>
 </body>
 </html>
