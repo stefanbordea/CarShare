@@ -8,9 +8,13 @@ use App\Authentication;
 
 
 <?php
-if (Authentication::isLoggedIn()) :
-?>
-  User with email <?php echo $_SESSION['user_email']; ?> is logged in. <a href="/logout">Log out</a>.
+
+//    if(Authentication::isLoggedIn()):
+//?>
+<!--User with email --><?php //echo $_SESSION['user_email']; ?><!-- is logged in. <a href="/logout">Log out</a>.-->
+<!---->
+<?php //else: ?>
+<a href="/signup">Sign up</a> or <a href="/login">Log in</a>.
 
 <?php endif; ?>
 

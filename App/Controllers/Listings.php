@@ -70,19 +70,28 @@ class Listings extends Authenticated
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
+            Vehicle::deleteVehicle($data['vehicleID']);
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 $data['photoLink'] = $_FILES['fileToUpload']['name'];
-                $listing = new Listing($data);
-
-                if($listing->save()) {
-                    //also car needs to be available
-                    $this->redirect('/listings/successfulListing');
+                if ($data['vehicleID'] != false) {
+                    $listing = new Listing($data);
+                    if($listing->save()) {
+                        //also car needs to be available
+                        $this->redirect('/listings/successfulListing');
+                        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    } else {
+                        Vehicle::deleteVehicle($data['vehicleID']);
+                    }
+                } else {
+                    echo 'Vehicle was not added successfully';
                 }
+
+
             } else {
                 echo "Sorry, there was an error uploading your file.";
+                Vehicle::deleteVehicle($data['vehicleID']);
             }
         }
 
