@@ -9,10 +9,14 @@
                     <li><a href="/About/about" class="nav-link px-2 text-white">About</a></li>
                 </ul>
 
-
                 <div class="text-end">
-                    <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                    <a href="/Signup/signup"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                    <?php if(isset($_SESSION['user_id'])) { ?>
+                        <a href="/Profile/profile"><button type="button" class="btn btn-outline-light me-2">Profile</button></a>
+                        <a href="/logout"><button type="button" class="btn btn-outline-light">Log out</button></a>
+                    <?php } else{ ?>
+                        <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                        <a href="/Signup/signup"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                    <?php }?>
                 </div>
             </div>
         </div>
@@ -26,3 +30,25 @@
 <!--        <li><a href="/Login/login">Login</a></li>-->
 <!--        <li><a href="/Signup/signup">Sign up</a></li>-->
 <!--    </ul>-->
+    <footer class="w-100" id="footerID">
+        <div class="footerContainer">
+            <div class="footer">
+                <div class="footerLeft">
+                    <h5 class="text-white mb-3">More links</h5>
+                    <ul class="footerNavigation list-unstyled ">
+                        <li><a href="/"  class="nav-link px-2 text-white">Home</a></li>
+                        <li><a href="/Browse/browse"  class="nav-link px-2 text-white">Browse</a></li>
+                        <li><a href="/About/about"  class="nav-link px-2 text-white">About</a></li>
+                        <li><a href="/Privacy/privacy"  class="nav-link px-2 text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footerRight">
+                    <h5 class="h1 text-white">Something</h5>
+                    <p class="small ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <p class="small mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">www.carshare.com</a></p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
