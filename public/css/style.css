@@ -227,6 +227,7 @@ h3#Disclaimer {
 #browseContainer {
     /*width:50%;*/
     padding-bottom: 2.5rem;
+
 }
 
 #listingTitle {
@@ -269,7 +270,57 @@ h3#Disclaimer {
 }
 
 
-.page-item{
 
-    
+
+#browseCards {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    display: inline-block;
+    width: 18rem;
+    height: 24rem;
+
+}
+
+#browseCards img {
+
+    height: 12rem;
+}
+
+
+
+.form-container {
+    margin-top: 4rem;
+    display: block;
+    text-align: center;
+}
+
+.form {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+
+
+#searchbar {
+
+    width: 18rem;
+    height: 40px;
+
+}
+
+.form-btn {
+    background-color: #1B1725;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 5em;
+    font-size: 20px;
+
+}
+
+.form-btn:hover {
+    background-color: #B3B3F1;
 }
