@@ -15,11 +15,13 @@ foreach($listings as $listing){
 
 
 
+
     if($listing['vehicleID'] == $passedId){ ?>
 
         <div class="row" id="listingTitle">
                 <div class="photo" id="firstColumn" >
                     <h1> <?php echo $vehicles[$listing['vehicleID']]['brand'] . ' ' . $vehicles[$listing['vehicleID']]['model'] ?></h1>
+
                 </div>
         </div>
 
@@ -30,7 +32,15 @@ foreach($listings as $listing){
         </div>
 
 
-    <div class="listingInfo"></div>
+    <div class="row">
+        <div class="col-md-6" id="firstColumnListing">
+            Uploaded by:
+        </div>
+        <div class="col-md-6" id="secondColumnListing">
+<!--                --><?php //echo $licenses[$listing['userID']]['lname']; ?>
+        </div>
+
+    </div>
     <div class="row">
         <div class="col-md-6" id="firstColumnListing">
             Brand:
@@ -89,29 +99,35 @@ foreach($listings as $listing){
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-6 date" id="firstColumnListing">
+    <div class="row ">
+        <div class="col-md-6 " id="firstColumnListing">
             Select Pickup Date:
         </div>
-        <div class="col-md-6 date" id="secondColumnListing" >
-            <input class="form-control datePicker" type="date" placeholder ="Select DateTime" id="pickupDate">
+        <div class="col-md-6 " id="secondColumnListing" >
+            <input class="form-control datepicker" type="date" placeholder ="Select DateTime" id="pickupDate">
         </div>
     </div>
     <div class="row ">
-        <div class="col-md-6 date" id="firstColumnListing">
-            Select Pickup Date:
+        <div class="col-md-6 " id="firstColumnListing">
+            Select Return Date:
         </div>
-        <div class="col-md-6 date" id="secondColumnListing">
-            <input class="form-control " type="date" placeholder ="Select DateTime" id="returnDate">
+        <div class="col-md-6 " id="secondColumnListing">
+            <input class="form-control datepicker " type="date" placeholder ="Select DateTime" id="returnDate">
+        </div>
+    </div>
+    <div class="row last">
+        <div class="col-md-6 " id="firstColumnListing">
+            Total Price for
+        </div>
+        <div class="col-md-6 " id="secondColumnListing">
+            <p id="totalPrice"> </p>
         </div>
     </div>
     <div class="row last">
         <div class="col-md-6 date" id="firstColumnListing">
-            <button class="btn btn-primary" onclick="calculateDays()" id="calculatePrice">Calculate Price</button>
+            <button class="btn btn-primary" onclick="calculateTotalPrice()" id="calculatePrice">Calculate Price</button>
         </div>
-        <div class="col-md-6 date" id="secondColumnListing">
-            <p id="totalPrice"> </p>
-        </div>
+
     </div>
 
 
@@ -125,7 +141,9 @@ foreach($listings as $listing){
 <?php
     }
 
+
 }
+
 ?>
 
 
