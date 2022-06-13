@@ -23,29 +23,42 @@ class Browse extends \Core\Controller
         //echo " (after)";
     }
 
-    public function browseAction($listings = null){
+    public function browseAction($listings = null, $query = null){
 
+        //if the function is called from the navigation no parameter is provided, so default value is applied
+        //and all listings should be shown
         if ($listings == null) {
             $listings = Listing::getAll();
         }
 
         $vehicles = array();
-        foreach ($listings as $listing) {
-            $vehicles[$listing['vehicleID']] = Vehicle::getVehicleByID($listing['vehicleID']);
+        //if the function is called from searchListings() then $listings is equal to the results of the search
+        if ($listings != -1) {
+            foreach ($listings as $listing) {
+                $vehicles[$listing['vehicleID']] = Vehicle::getVehicleByID($listing['vehicleID']);
+            }
+        } else { //if no matching listing was found, listings is equal to -1
+            $listings = [];
+            $vehicles = [];
         }
 
         View::render('Browse/browse.php', [
             'listings' => $listings,
-            'vehicles' => $vehicles
+            'vehicles' => $vehicles,
+            'qry' => $query
         ]);
     }
 
-    public function searchListings() {
+    public function searchListingsAction() {
         $query = $_GET['query'];
         $query = htmlspecialchars($query);
         // changes characters used in html to their equivalents, for example: < to &gt;
         $listings = Listing::searchListing($query);
-        $this->browseAction($listings);
+        if ($listings == null) {
+            $listings = -1;
+        }
+        //The query is passed to browseAction for pagination of results
+        $this->browseAction($listings, $query);
 
     }
 
