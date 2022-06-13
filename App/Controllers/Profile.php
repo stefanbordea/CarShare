@@ -24,7 +24,7 @@ class Profile extends Authenticated
         }
 
         View::render('Profile/profile.php', [
-            'listings' => $listing,
+            'listings' => $listings,
             'profile'=>$profile,
             'license' => $license,
             'vehicles'=>$vehicles,
