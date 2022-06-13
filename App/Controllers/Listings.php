@@ -107,4 +107,9 @@ class Listings extends Authenticated
         echo '<p>Route parameters: <pre>' . htmlspecialchars(print_r($this->route_params, true)) . '</pre></p>';
     }
 
+    //method is not used but could be useful
+    public static function getListingsSorted($sortBy, $order) {
+        return Listing::getListingsSorted($sortBy, $order);
+    }
+
 }
