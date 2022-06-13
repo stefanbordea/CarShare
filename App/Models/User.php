@@ -51,10 +51,10 @@ class User extends \Core\Model
         if($this->emailExists($this->email, $this->ID ?? null)){
             $this->errors[] = 'Email already taken';
         }
-
-        if($this->password != $this->passwordConfirmation){
-            $this->errors[] = 'Passwords must match';
-        }
+//
+//        if($this->password != $this->passwordConfirmation){
+//            $this->errors[] = 'Passwords must match';
+//        }
 
         if(strlen($this->password) < 8){
             $this->errors[] = 'Please enter at least 8 characters for the password';
@@ -91,6 +91,16 @@ class User extends \Core\Model
 
         $stmt->execute();
 
+        return $stmt->fetch();
+    }
+
+    public static function findByID($id){
+        $sql = 'SELECT * FROM User WHERE ID = :id';
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+        $stmt->execute();
         return $stmt->fetch();
     }
 
@@ -195,5 +205,26 @@ class User extends \Core\Model
             return $stmt->execute();
         }
         return false;
+    }
+
+    public function updatePassword($data){
+        $this->password = $data['password'];
+        var_dump($this->password);
+        $this->validate();
+
+
+        $passwordhash = password_hash($this->password, PASSWORD_DEFAULT);
+        if(empty($this->errors)){
+            $sql = 'UPDATE User
+                    SET passwordhash = :passwordhash
+                    WHERE ID = :id';
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);
+            $stmt->bindValue(':id', $this->ID, PDO::PARAM_INT);
+            $stmt->bindValue(':passwordhash', $passwordhash, PDO::PARAM_STR);
+
+
+            $stmt->execute();
+        }
     }
 }

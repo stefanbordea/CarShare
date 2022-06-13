@@ -34,9 +34,16 @@ body{
     padding:0;
 }
 
+
 .form-control{
     margin:0 auto;
 }
+
+/*.form-control{*/
+/*    width:30%;*/
+/*    margin:0 auto;*/
+/*}*/
+
 .formLabel{
     display:block;
     text-align:center;
@@ -90,6 +97,7 @@ body{
 
 /*!**************************!*/
 
+
 /*----------BROWSE INDEX ----------*/
 .listingImage {
     width:50%;
@@ -127,4 +135,8 @@ body{
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
+
+.pagin{
+    margin-bottom: 10em;
+
 }
