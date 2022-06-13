@@ -6,14 +6,6 @@ use App\Authentication;
 
 ?>
 
-
-
-<a href="/signup">Sign up</a> or <a href="/login">Log in</a>.
-
-
-<a href="/signup">Sign up</a> or <a href="/login">Log in</a>.
-
-
 <!---------------------->
 <!-- CAROUSEL-->
 <!---------------------->
