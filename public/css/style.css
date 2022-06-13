@@ -1,16 +1,15 @@
 /*HOME PAGE STYLING*/
 .carousel {
-
+    width: 800px;
+    margin: auto;
     align-content: center;
     justify-content: center;
-   
-    justify-content: center;
+
 
 }
 
 .carousel-inner .carousel-item img {
     height: 500px;
-    width: 750px;
     margin: auto;
 }
 
