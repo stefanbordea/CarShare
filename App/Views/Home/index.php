@@ -24,7 +24,7 @@ if (Authentication::isLoggedIn()) :
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/images/car-sunset3.jpg" alt="" class="d-block">
+        <img src="/images/car-sunset.jpg" alt="" class="d-block">
       </div>
       <div class="carousel-item">
         <img src="/images/suv.jpg" alt="" class="d-block">
@@ -46,7 +46,7 @@ if (Authentication::isLoggedIn()) :
   <!---------------------->
   <!-- CARDS-->
   <!---------------------->
-  <div class="container">
+  <div class="container homeCards" >
     <div class="row g-3">
       <!--1ST CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">

@@ -21,7 +21,10 @@
     border-radius: 5%;
 
 }
+.homeCards{
 
+    margin-bottom: 10em;
+}
 .login-title {
     padding-top: 1em;
     text-align: center;
@@ -90,16 +93,10 @@ body{
     margin:0;
     height:150px !important;
     background-color: #1B1725;
-    color: white;
-    padding: 0 35px;
-    padding-top: 5px;
-    padding-bottom: 0px;
-    transition: 400ms;
-
-
+    bottom:0;
 }
-
-.cookie-container.active{
+.footerContainer{
+    padding-left:3em;
     bottom:0;
 
 }
@@ -107,6 +104,33 @@ body{
     margin-top: auto;
     height: 100%!important;
     bottom:0;
+}
+
+
+.footerRight{
+    color:white;
+    bottom:0;
+
+    position:absolute;
+    right:1em;
+    align-content: center;
+    padding-bottom:1em;
+
+}
+
+
+.footerLeft{
+
+
+
+}
+
+.footerLeft a{
+    display:block;
+}
+.cookie-container.active{
+    bottom:0;
+
 }
 
 .cookie-btn {
