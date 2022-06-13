@@ -12,9 +12,7 @@ require '../App/Views/common/navigation.php';
 </div>
 
 <div class="row mt-4">
-    <?php foreach ($listings as $listing) {
-        $url = "/Listings/index?id=" . $listing['vehicleID'];
-    }
+    <?php
 
     // Look for a GET variable page if not found default is 1.
     if (isset($_GET["page"])) {
@@ -34,6 +32,7 @@ require '../App/Views/common/navigation.php';
 
     for ($i = $startFrom; $i < $endAt; $i++) {
         $listing = $listings[$i];
+        $url = "/Listings/index?id=" . $listing['vehicleID'];
 
     ?>
 
