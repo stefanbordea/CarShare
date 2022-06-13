@@ -47,6 +47,102 @@
     bottom: -100%;
     left: 0;
     right: 0;
+
+}
+html{
+    height:100%;
+}
+body{
+    /* eprepe na to valw relative gia to footer - an vroume allon tropo to allazoume
+     dokimasa na to valw sto #footerId kai #footerContainer kai den doulepse*/
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+}
+
+/*.form-control{*/
+/*    width:30%;*/
+/*    margin:0 auto;*/
+/*}*/
+.formLabel{
+    display:block;
+    text-align:center;
+}
+/*--------- FOOTER------------- */
+
+/*.footer {*/
+/*    position: fixed;*/
+/*    color: white;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    height: 20%; !* Set the fixed height of the footer here *!*/
+/*    line-height: 60px; !* Vertically center the text there *!*/
+/*    background-color: #1B1725;*/
+/*    display:inline-block;*/
+/*    font-size:1em;*/
+/*    margin-top:auto;*/
+/*}*/
+
+/*.footer-container{*/
+/*    !*border: 5px solid black;*!*/
+/*    position: relative;*/
+/*    display:flex;*/
+/*    justify-content: space-around;*/
+/*    !*align-content: center;*!*/
+/*    height: 100%;*/
+/*    align-items: stretch;*/
+
+/*}*/
+
+/*.footer-left{*/
+/*    !*align-self: center;*!*/
+/*    justify-content: left;*/
+/*    display:inline;*/
+/*}*/
+/*.footerNavigation{*/
+/*    padding:0;*/
+/*    margin:0;*/
+/*    list-style: none;*/
+/*    height: 50px;*/
+
+/*}*/
+/*.footer-left h5{*/
+/*    text-align: center;*/
+/*    padding-top: 0.5em;*/
+
+/*}*/
+
+/*.footerLink{*/
+/*    display: inline-block;*/
+/*    align-self: center;*/
+/*    justify-self: center;*/
+/*    !*padding-right:3em;*!*/
+/*    !*padding-bottom: 0;*!*/
+/*    !*margin:0;*!*/
+
+/*    height: 100%;*/
+/*}*/
+
+
+/*.footer-right{*/
+/*    align-self: center;*/
+/*    justify-content: right;*/
+/*}*/
+/*.footer-right h3{*/
+/*    padding-top:0.5em;*/
+/*}*/
+/*.container{*/
+
+/*}*/
+
+#footerID{
+    position:absolute;
+    padding:0;
+    margin:0;
+    height:150px !important;
     background-color: #1B1725;
     color: white;
     padding: 0 35px;
