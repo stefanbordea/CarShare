@@ -4,6 +4,8 @@
     margin-bottom: -1em;
 }
 
+
+
 .bg-dark{
     background-color: #1B1725 !important;
 }
@@ -130,13 +132,30 @@ body{
     padding-bottom:0.7em;
 }
 
-#map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
+#map{
+    width: 30%;
+    height: 30%;
+    border: 3px solid black;
+}
 
 .pagin{
     margin-bottom: 10em;
+}
+.aboutUs{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
 
 }
+#aboutUsRow{
+    padding-top:1em;
+    align-self: center;
+}
+#map{
+
+    align-self: center;
+}
+#emailList{
+    list-style: none;
+}
+
