@@ -1,42 +1,108 @@
-.login-title{
+/*HOME PAGE STYLING*/
+.carousel {
+
+    align-content: center;
+    justify-content: center;
+    margin-left: 400px;
+    margin-right: 400px;
+
+}
+
+.carousel-inner .carousel-item img {
+    height: 500px;
+    width: 750px;
+}
+
+#homeCards {
+    margin-top: 40px;
+    width: 310px;
+    height: 345px;
+    margin-left: 30px;
+    border-radius: 5%;
+
+}
+
+.homeCards {
+
+    margin-bottom: 10em;
+}
+
+.login-title {
     padding-top: 1em;
     text-align: center;
     margin-bottom: -1em;
 }
 
-.bg-dark{
+.bg-dark {
     background-color: #1B1725 !important;
 }
 
 .btn-warning,
-.btn-primary{
+.btn-primary {
     background-color: #B3B3F1 !important;
     border-color: #B3B3F1 !important;
 }
 
-.link{
-    color: #6A66A3
-    !important;
+.link {
+    color: #6A66A3 !important;
 }
 
-html{
-    height:100%;
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: #1B1725;
+    color: white;
+    padding: 0 35px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    transition: 400ms;
+
+
 }
-body{
+
+.cookie-container.active {
+    bottom: 0;
+
+}
+
+.cookie-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.cookie-btn {
+    font-size: 14px;
+    color: white;
+    background-color: #736fb0;
+    cursor: pointer;
+    border-top: 2px;
+    margin-left: 15px;
+    border: 0;
+    border-radius: 9px;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
     /* eprepe na to valw relative gia to footer - an vroume allon tropo to allazoume
      dokimasa na to valw sto #footerId kai #footerContainer kai den doulepse*/
-    position:relative;
-    display:flex;
+    position: relative;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin:0;
+    margin: 0;
 
-    padding:0;
+    padding: 0;
 }
 
 
-.form-control{
-    margin:0 auto;
+.form-control {
+    margin: 0 auto;
 }
 
 /*.form-control{*/
@@ -44,90 +110,147 @@ body{
 /*    margin:0 auto;*/
 /*}*/
 
-.formLabel{
-    display:block;
-    text-align:center;
+.formLabel {
+    display: block;
+    text-align: center;
 }
-.datepicker{
-    width:30%;
+
+.datepicker {
+    width: 30%;
 
 }
 
-#footerID{
-    position:absolute;
-    padding:0;
-    margin:0;
-    height:150px !important;
+#footerID {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 150px !important;
     background-color: #1B1725;
-    bottom:0;
+    bottom: 0;
 }
-.footerContainer{
-    padding-left:3em;
-    bottom:0;
+
+.footerContainer {
+    padding-left: 3em;
+    bottom: 0;
 
 }
-.footer{
+
+.footer {
     margin-top: auto;
-    height: 100%!important;
-    bottom:0;
+    height: 100% !important;
+    bottom: 0;
 }
 
 
-.footerRight{
-    color:white;
-    bottom:0;
+.footerRight {
+    color: white;
+    bottom: 0;
 
-    position:absolute;
-    right:1em;
+    position: absolute;
+    right: 1em;
     align-content: center;
-    padding-bottom:1em;
+    padding-bottom: 1em;
 
 }
 
 
-.footerLeft{
+.footerLeft {}
+
+.footerLeft a {
+    display: block;
+}
 
 
+
+/*TERMS PAGE*/
+#termsBody {
+
+    /* background-color: #6d69a5; */
+    border-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#termsHeader {
+    color: #2a243a;
+    /* text-align: center; */
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
 
 }
-.footerLeft a{
-    display:block;
+
+
+h3#Intro,
+h3#Cookies,
+h3#License,
+h3#Hyperlink,
+h3#iFrames,
+h3#ContentLiability,
+h3#Privacy,
+h3#Disclaimer {
+    /* color: white; */
+    /* text-align: center; */
+    margin-left: 10px;
+    margin-right: 10px;
 }
-/*--------- FOOTER------------- */
+
+#termsBody p {
+    /* color: white; */
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#termsNavbar .container-fluid .navbar-nav>li>a {
+    color: white;
+    margin-right: 15px;
+}
+
+#termsNavbar .container-fluid .navbar-nav>li>a:hover {
+    color: #B3B3F1;
+
+}
 
 /*!**************************!*/
 
 
 /*----------BROWSE INDEX ----------*/
 .listingImage {
-    width:50%;
-    margin:0 auto;
+    width: 50%;
+    margin: 0 auto;
     padding-top: 1em;
 }
-#browseContainer{
+
+#browseContainer {
     /*width:50%;*/
     padding-bottom: 2.5rem;
+
 }
-#listingTitle{
-    margin:0 auto;
+
+#listingTitle {
+    margin: 0 auto;
     text-align: center;
-    padding-top:2em;
+    padding-top: 2em;
 }
-#firstColumnListing{
+
+#firstColumnListing {
     text-align: right;
 }
 
-.listingInfo{
-    margin-top:2em;
+.listingInfo {
+    margin-top: 2em;
 }
 
-.last{
-    margin-bottom:10em;
+.last {
+    margin-bottom: 10em;
 }
 
-.date{
-    padding-top:0.7em;
-    padding-bottom:0.7em;
+.date {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
 }
 
 #map {
@@ -136,11 +259,68 @@ body{
     width: 100%;
     /* The width is the width of the web page */
 }
-.pagin{
+
+.pagin {
     margin-bottom: 10em;
 
 }
 
-.tab-content{
+.tab-content {
     margin-bottom: 10em;
+}
+
+
+
+
+#browseCards {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    display: inline-block;
+    width: 18rem;
+    height: 24rem;
+
+}
+
+#browseCards img {
+
+    height: 12rem;
+}
+
+
+
+.form-container {
+    margin-top: 4rem;
+    display: block;
+    text-align: center;
+}
+
+.form {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+
+
+#searchbar {
+
+    width: 18rem;
+    height: 40px;
+
+}
+
+.form-btn {
+    background-color: #1B1725;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 5em;
+    font-size: 20px;
+
+}
+
+.form-btn:hover {
+    background-color: #B3B3F1;
 }
