@@ -72,6 +72,18 @@ class Listing extends \Core\Model
 
     }
 
+    //method is not used but could be useful
+    public static function getListingsSorted($sortBy, $order) {
+        try{
+            $db = static::getDB();
+            $stmt = $db->query('SELECT * from Listing ORDER BY ' . $sortBy . ' ' . $order);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
 
 
 }

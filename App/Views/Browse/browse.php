@@ -11,8 +11,77 @@ require '../App/Views/common/navigation.php';
     </form>
 </div>
 
+<form action="" method="GET">
+    <label for="sort">Sort by :</label>
+    <select name="sort" id="sort">
+        <option value="1">Price Ascending</option>
+        <option value="2">Price Descending</option>
+    </select>
+
+    <?php
+    //storing the query passed from Browse Controller for pagination of results
+    $query = $qry;
+    //if the user has searched pass the query for sorting of results
+    if (isset($query)) {
+    ?>
+    <input type="hidden" name="query" value="<?php echo $query ?>">
+    <?php
+    }
+    ?>
+    <?php
+    if (isset($_GET['page'])) {
+        ?>
+        <input type="hidden" name="page" value="<?php echo $_GET['page'] ?>">
+        <?php
+    }
+    ?>
+    <button type="submit">Sort</button>
+</form>
+
+
+
+
 <div class="row mt-4">
     <?php
+
+//    if (isset($_POST['sort'])) {
+//        switch ($_POST['sort']) {
+//            case 1:
+//                $sortBy = "pricePerDay";
+//                $order = "ASC";
+//                break;
+//            case 2:
+//                $sortBy = "pricePerDay";
+//                $order = "DESC";
+//                break;
+//        }
+//        $listings = \App\Controllers\Listings::getListingsSorted($sortBy, $order);
+//    }
+
+
+    if (isset($_GET['sort'])) {
+        switch ($_GET['sort']) {
+            case 1:
+                //Sort two-dimensional array $listings with usort function
+                function build_sorter($key) {
+                    return function ($a, $b) use ($key) {
+                        //$a[$key] is less, equal or greater than $b[$key] the function returns -1, 0 or 1 respectively
+                        return $a[$key] <=> $b[$key];
+                    };
+                }
+                //usort is sorting the array based on the value return from build_sorter
+                usort($listings, build_sorter('pricePerDay'));
+                break;
+            case 2:
+                function build_sorter($key) {
+                    return function ($a, $b) use ($key) {
+                        return $b[$key] <=> $a[$key];
+                    };
+                }
+                usort($listings, build_sorter('pricePerDay'));
+                break;
+        }
+    }
 
     // Look for a GET variable page if not found default is 1.
     if (isset($_GET["page"])) {
@@ -22,8 +91,8 @@ require '../App/Views/common/navigation.php';
     }
 
 
-    //storing the query passed from Browse Controller for pagination of results
-    $query = $qry;
+
+
     $numberOfListings = count($listings);
     $listingsPerPage = 5;
     $numberOfPages = ceil($numberOfListings / $listingsPerPage);
@@ -60,62 +129,40 @@ require '../App/Views/common/navigation.php';
 <nav class="pagin" aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <?php
-        //if query is null then user browses
-        if (!isset($query)) {
-        ?>
-            <?php
-            if ($page > 1) {
-            ?>
-                <li class="page-item"><a class="page-link" href="<?php echo '?page=' . ($page - 1) ?>">Previous</a></li>
-            <?php
-            }
-            ?>
-            <?php
-            for ($i = 1; $i <= $numberOfPages; $i++) {
-            ?>
-                <li <?php echo $i == $page ? 'class="page-item active"' : 'class="page-item"' ?>>
-                    <a class="page-link" href="<?php echo '?page=' . $i ?>"><?php echo $i ?></a>
-                </li>
-            <?php
-            }
-            ?>
-            <?php
-            if ($page < $numberOfPages) {
-            ?>
-                <li class="page-item"><a class="page-link" href="<?php echo '?page=' . ($page + 1) ?>">Next</a></li>
-            <?php
-            }
-            ?>
-        <?php
-        } else { // else if query is not null the user searched and search results are paginated
-        ?>
-            <?php
-            if ($page > 1) {
-            ?>
-                <li class="page-item"><a class="page-link" href="<?php echo '?query=' . $query . '&page=' . ($page - 1) ?>">
-                        Previous</a></li>
-            <?php
-            }
-            ?>
-            <?php
-            for ($i = 1; $i <= $numberOfPages; $i++) {
-            ?>
-                <li <?php echo $i == $page ? 'class="page-item active"' : 'class="page-item"' ?>>
-                    <a class="page-link" href="<?php echo '?query=' . $query . '&page=' . $i ?>"><?php echo $i ?></a>
-                </li>
-            <?php
-            }
-            ?>
-            <?php
-            if ($page < $numberOfPages) {
-            ?>
-                <li class="page-item"><a class="page-link" href="<?php echo '?query=' . $query . '&page=' . ($page + 1) ?>">
-                        Next</a></li>
-            <?php
-            }
-            ?>
-        <?php
+        //changing the paginationURL based on whether the user is browsing, searching or sorting
+        $paginationURL = '?page=';
+        if (isset($query)) {
+            $paginationURL = '?query=' . $query . '&page=';
         }
+        if (isset($_GET['sort'])) {
+            $paginationURL = '?sort=' . $_GET['sort'] .'&query=' . $query . '&page=';
+        }
+
+
         ?>
+            <?php
+            if ($page > 1) {
+            ?>
+                <li class="page-item"><a class="page-link" href="<?php echo $paginationURL . ($page - 1) ?>">Previous</a></li>
+            <?php
+            }
+            ?>
+            <?php
+            for ($i = 1; $i <= $numberOfPages; $i++) {
+            ?>
+                <li <?php echo $i == $page ? 'class="page-item active"' : 'class="page-item"' ?>>
+                    <a class="page-link" href="<?php echo $paginationURL  . $i ?>"><?php echo $i ?></a>
+                </li>
+            <?php
+            }
+            ?>
+            <?php
+            if ($page < $numberOfPages) {
+            ?>
+                <li class="page-item"><a class="page-link" href="<?php echo $paginationURL  . ($page + 1) ?>">Next</a></li>
+            <?php
+            }
+            ?>
+
     </ul>
 </nav>
