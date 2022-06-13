@@ -5,6 +5,7 @@ use App\Authentication;
 use App\Models\User;
 use App\Models\ProfileModel;
 use App\Models\Listing;
+use App\Models\Vehicle;
 use Core\View;
 
 class Profile extends Authenticated
@@ -14,13 +15,21 @@ class Profile extends Authenticated
 
     public function profileAction(){
         $profile = ProfileModel::getAll();
-        $listing = Listing::getAll();
+        $listings = Listing::getAll();
         $license = ProfileModel::getLicense();
+
+        $vehicles = array();
+        foreach ($listings as $listing) {
+            $vehicles[$listing['vehicleID']] = Vehicle::getVehicleByID($listing['vehicleID']);
+        }
+
         View::render('Profile/profile.php', [
             'listings' => $listing,
             'profile'=>$profile,
             'license' => $license,
+            'vehicles'=>$vehicles,
             'user' => Authentication::getUser()
+
 
         ]
     );

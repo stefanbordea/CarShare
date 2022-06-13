@@ -53,9 +53,31 @@ use App\Authentication;
             </div>
 
         </div>
-        <div class="tab-pane fade" id="listings" role="tabpanel" aria-labelledby="home-tab">Listings</div>
+        <div class="tab-pane fade" id="listings" role="tabpanel" aria-labelledby="home-tab">
+
+
+
+            <?php foreach ($listings as $listing)  {
+                if($_SESSION['user_id'] == $listing['userID']){
+            $url = "/Listings/index?id=".$listing['vehicleID'];
+            ?>
+            <div class="card" style="width: 18rem;" method="GET" >
+                <img src="../images/<?php echo  $listing['photoLink']?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $vehicles[$listing['vehicleID']]['brand'] . ' ' . $vehicles[$listing['vehicleID']]['model'] ?></h5>
+                    <p class="card-text"><?php echo 'Price per day : ' . $listing['pricePerDay'] . '€<br>'.
+                            'Pickup : ' . $listing['pickupLocation'] .' <br>'.
+                            'Return : ' . $listing['returnLocation']?></p>
+                    <a href="<?php echo $url;?>" class="btn btn-primary">More Details</a>
+                </div>
+            </div>
+        </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
     </div>
+<?php
+    }
+}
+?>
 <?php // foreach($license as $license) { ?>
 <!--    <h3> Hello, --><?php //echo $license['fname'] . " ". $license['lname'];?><!--</h3>-->
 <!--    --><?php //}?>

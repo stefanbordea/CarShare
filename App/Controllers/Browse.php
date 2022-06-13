@@ -41,7 +41,6 @@ class Browse extends \Core\Controller
             $listings = [];
             $vehicles = [];
         }
-
         View::render('Browse/browse.php', [
             'listings' => $listings,
             'vehicles' => $vehicles,

@@ -11,7 +11,11 @@ require '../App/Views/common/navigation.php';
 </form>
 
 
-    <?php
+
+    <?php foreach ($listings as $listing)  {
+        $url = "/Listings/index?id=".$listing['vehicleID'];
+      }
+    
         // Look for a GET variable page if not found default is 1.
         if (isset($_GET["page"])) {
             $page  = $_GET["page"];
@@ -29,8 +33,9 @@ require '../App/Views/common/navigation.php';
 
         for ($i = $startFrom; $i < $endAt; $i++) {
             $listing = $listings[$i];
+
      ?>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" method="GET" >
         <img src="../images/<?php echo  $listing['photoLink']?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php echo
@@ -38,9 +43,10 @@ require '../App/Views/common/navigation.php';
             <p class="card-text"><?php echo 'Price per day : ' . $listing['pricePerDay'] . '€<br>'.
                                             'Pickup : ' . $listing['pickupLocation'] .' <br>'.
                                             'Return : ' . $listing['returnLocation']?></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="<?php echo $url;?>" class="btn btn-primary">More Details</a>
         </div>
     </div>
+
     <?php
     }
     if ($listings == []) {
