@@ -1,6 +1,6 @@
 <?php
 require_once '../App/config/config.php';
-require '../vendor/autoload.php';
+//require '../vendor/autoload.php';
 
 //echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
 
