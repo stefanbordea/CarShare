@@ -71,13 +71,16 @@ use App\Authentication;
                     <a href="<?php echo $url;?>" class="btn btn-primary">More Details</a>
                 </div>
             </div>
+                    <?php
+                }
+            }
+            ?>
         </div>
+
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
+
     </div>
-<?php
-    }
-}
-?>
+
 <?php // foreach($license as $license) { ?>
 <!--    <h3> Hello, --><?php //echo $license['fname'] . " ". $license['lname'];?><!--</h3>-->
 <!--    --><?php //}?>
