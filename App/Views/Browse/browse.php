@@ -48,7 +48,7 @@ require '../App/Views/common/navigation.php';
     }
     ?>
 
-    <nav aria-label="Page navigation example">
+    <nav class="pagin" aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             <?php
                 //if query is null then user browses
