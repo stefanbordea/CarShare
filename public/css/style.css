@@ -132,6 +132,7 @@ body{
     padding-bottom:0.7em;
 }
 
+
 #map{
     width: 30%;
     height: 30%;
@@ -157,5 +158,13 @@ body{
 }
 #emailList{
     list-style: none;
+}
+
+
+
+}
+
+.tab-content{
+    margin-bottom: 10em;
 }
 
