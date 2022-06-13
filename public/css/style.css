@@ -30,83 +30,28 @@ body{
     flex-direction: column;
     min-height: 100vh;
     margin:0;
+
     padding:0;
+}
+
+
+.form-control{
+    margin:0 auto;
 }
 
 /*.form-control{*/
 /*    width:30%;*/
 /*    margin:0 auto;*/
 /*}*/
+
 .formLabel{
     display:block;
     text-align:center;
 }
-/*--------- FOOTER------------- */
+.datepicker{
+    width:30%;
 
-/*.footer {*/
-/*    position: fixed;*/
-/*    color: white;*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*    height: 20%; !* Set the fixed height of the footer here *!*/
-/*    line-height: 60px; !* Vertically center the text there *!*/
-/*    background-color: #1B1725;*/
-/*    display:inline-block;*/
-/*    font-size:1em;*/
-/*    margin-top:auto;*/
-/*}*/
-
-/*.footer-container{*/
-/*    !*border: 5px solid black;*!*/
-/*    position: relative;*/
-/*    display:flex;*/
-/*    justify-content: space-around;*/
-/*    !*align-content: center;*!*/
-/*    height: 100%;*/
-/*    align-items: stretch;*/
-
-/*}*/
-
-/*.footer-left{*/
-/*    !*align-self: center;*!*/
-/*    justify-content: left;*/
-/*    display:inline;*/
-/*}*/
-/*.footerNavigation{*/
-/*    padding:0;*/
-/*    margin:0;*/
-/*    list-style: none;*/
-/*    height: 50px;*/
-
-/*}*/
-/*.footer-left h5{*/
-/*    text-align: center;*/
-/*    padding-top: 0.5em;*/
-
-/*}*/
-
-/*.footerLink{*/
-/*    display: inline-block;*/
-/*    align-self: center;*/
-/*    justify-self: center;*/
-/*    !*padding-right:3em;*!*/
-/*    !*padding-bottom: 0;*!*/
-/*    !*margin:0;*!*/
-
-/*    height: 100%;*/
-/*}*/
-
-
-/*.footer-right{*/
-/*    align-self: center;*/
-/*    justify-content: right;*/
-/*}*/
-/*.footer-right h3{*/
-/*    padding-top:0.5em;*/
-/*}*/
-/*.container{*/
-
-/*}*/
+}
 
 #footerID{
     position:absolute;
@@ -122,7 +67,7 @@ body{
 
 }
 .footer{
-
+    margin-top: auto;
     height: 100%!important;
     bottom:0;
 }
@@ -151,6 +96,47 @@ body{
 /*--------- FOOTER------------- */
 
 /*!**************************!*/
+
+
+/*----------BROWSE INDEX ----------*/
+.listingImage {
+    width:50%;
+    margin:0 auto;
+    padding-top: 1em;
+}
+#browseContainer{
+    /*width:50%;*/
+    padding-bottom: 2.5rem;
+}
+#listingTitle{
+    margin:0 auto;
+    text-align: center;
+    padding-top:2em;
+}
+#firstColumnListing{
+    text-align: right;
+}
+
+.listingInfo{
+    margin-top:2em;
+}
+
+.last{
+    margin-bottom:10em;
+}
+
+.date{
+    padding-top:0.7em;
+    padding-bottom:0.7em;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+
 .pagin{
     margin-bottom: 10em;
+
 }

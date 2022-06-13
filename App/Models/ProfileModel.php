@@ -58,5 +58,20 @@ class ProfileModel extends \Core\Model
 
     }
 
+    public static function getLicenseByUserID($userID){
+
+        try{
+            $db = static::getDB();
+            $stmt = $db->query('SELECT * from License WHERE userID = '.$userID);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch(PDOException $e){
+            echo $e->getMessage();
+        }
+
+
+    }
+
+
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Vehicle;
 use \Core\View;
 use App\Models\Listing;
 
@@ -12,9 +13,14 @@ class Listings extends Authenticated
         //echo "Hello from the index action in the Listings controller";
         //echo "<p>Query string parameters: <pre></pre>" . htmlspecialchars(print_r($_GET, true)) . "</pre></p>";
         $listings = Listing::getAll();
+        $vehicles = array();
+        foreach ($listings as $listing) {
+            $vehicles[$listing['vehicleID']] = Vehicle::getVehicleByID($listing['vehicleID']);
+        }
 
         View::render('Listings/index.php', [
-            'listings' => $listings
+            'listings' => $listings,
+            'vehicles'=>$vehicles
         ]);
     }
 
