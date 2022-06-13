@@ -1,8 +1,8 @@
 <?php
 //Database params
 define('DB_HOST', 'localhost');
-define('DB_USER', 'dionisis');
-define('DB_PASS', 'secret');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'carShare');
 
 //if true, errors will be displayed in the browser,
