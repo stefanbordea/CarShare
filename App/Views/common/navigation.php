@@ -35,6 +35,7 @@
                         <li><a href="/Browse/browse"  class="nav-link px-2 text-white">Browse</a></li>
                         <li><a href="/About/about"  class="nav-link px-2 text-white">About</a></li>
                         <li><a href="/Privacy/privacy"  class="nav-link px-2 text-white">Privacy Policy</a></li>
+                        <li><a href="/Terms/terms" class="nav-link px-2 text-white">Terms and Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footerRight">

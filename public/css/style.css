@@ -19,12 +19,18 @@
     height: 345px;
     margin-left: 30px;
     border-radius: 5%;
+    
 
 }
 
 .homeCards {
 
     margin-bottom: 10em;
+    display: flex;
+    justify-content: center;
+
+  
+  
 }
 
 .login-title {
@@ -125,7 +131,7 @@ body {
     position: absolute;
     padding: 0;
     margin: 0;
-    height: 150px !important;
+    height: 160px !important;
     background-color: #1B1725;
     bottom: 0;
 }
@@ -282,9 +288,6 @@ h3#Disclaimer {
 #emailList{
     list-style: none;
 }
-
-
-
 
 
 .tab-content {

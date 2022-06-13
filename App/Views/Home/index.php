@@ -38,7 +38,7 @@ use App\Authentication;
   <!---------------------->
   <!-- CARDS-->
   <!---------------------->
-  <div class="container homeCards" >
+  <div class="homeCards" >
     <div class="row g-3">
       <!--1ST CARD---------------->
       <div class="col-12 col-md-6 col-lg-4">
