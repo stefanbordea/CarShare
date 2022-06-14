@@ -50,7 +50,7 @@ use App\Authentication;
                     </div>
 
                 </div>
-                <a href="edit">Change Password</a>
+                <a href="/edit">Change Password</a>
             </div>
 
         </div>
