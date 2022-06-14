@@ -19,7 +19,7 @@
     height: 345px;
     margin-left: 30px;
     border-radius: 5%;
-    
+
 
 }
 
@@ -28,9 +28,9 @@
     margin-bottom: 10em;
     display: flex;
     justify-content: center;
+    padding-bottom: 5em;
 
-  
-  
+
 }
 
 .login-title {
@@ -261,31 +261,30 @@ h3#Disclaimer {
 }
 
 
-#map{
-    width: 30%;
-    height: 30%;
-    border: 3px solid black;
-}
-
-
 .pagin {
     margin-bottom: 10em;
 }
-.aboutUs{
-    height:100vh;
-    display:flex;
+/*-------------------*/
+#map {
+    width: 30%;
+    height: 30%;
+    border: 3px solid black;
+    align-self: center;
+}
+
+.aboutUs {
+    height: 100vh;
+    display: flex;
     flex-direction: column;
 
 }
-#aboutUsRow{
-    padding-top:1em;
-    align-self: center;
-}
-#map{
 
+#aboutUsRow {
+    padding-top: 1em;
     align-self: center;
 }
-#emailList{
+
+#emailList {
     list-style: none;
 }
 
@@ -304,7 +303,9 @@ h3#Disclaimer {
     height: 24rem;
 
 }
+/* ------------------------*/
 
+/* browse styling */
 #browseCards img {
 
     height: 12rem;
@@ -322,8 +323,6 @@ h3#Disclaimer {
     display: inline-block;
     font-size: 2rem;
 }
-
-
 
 #searchbar {
 
@@ -345,4 +344,98 @@ h3#Disclaimer {
 
 .form-btn:hover {
     background-color: #B3B3F1;
+}
+
+/* ------------------------*/
+
+/* Vehicle form styling */
+
+.vehform-container {
+
+    padding: 20px 20px;
+    display: flex;
+    margin-bottom: 10rem;
+    justify-content: center;
+    font-size: 18px;
+
+
+}
+
+.veh-container .head {
+    height: 50px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #1B1725;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.veh-img {
+    width: 380px;
+    height: 250px;
+
+}
+
+.promote-listing {
+    margin: 0 auto;
+
+
+}
+
+.input-box {
+    margin-bottom: 5px;
+}
+
+.vehsubmit {
+    margin-top: 10px;
+    background-color: #1B1725;
+
+    width: 80px;
+    border-radius: 7px;
+
+    height: 35px;
+    color: white;
+}
+
+.vehsubmit:hover {
+
+    background-color: #9b59b6;
+}
+
+/* ------------------------*/
+
+/* Listing form styling */
+
+#list-container {
+
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}
+
+#list-container h3 {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.listform {
+    background-color: white;
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+.listform .input-box label {
+    width: 200px;
+}
+
+#sitback {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10em;
+}
+
+.content-wwrapper {
+    margin: 0 auto;
+
 }
