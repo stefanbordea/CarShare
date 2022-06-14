@@ -28,9 +28,10 @@ require '../App/Views/common/navigation.php';
         <input type="text" id="description" name="description" placeholder="Description...">
     </div>
 
-    <div>
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="image" required>
+    <!-- The area for the drag & drop-->
+    <div class="drop-zone">
+        <span class="drop-zone__prompt">Drop image here or click to upload</span>
+        <input type="file" name="fileToUpload" id="image" class="drop-zone__input" required>
     </div>
 
     <div>
@@ -45,3 +46,4 @@ require '../App/Views/common/navigation.php';
 require '../App/Views/common/footer.php';
 ?>
 </html>
+<script src="/js/drag.js"></script>
