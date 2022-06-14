@@ -443,3 +443,8 @@ h3#Disclaimer {
     margin: 0 auto;
 
 }
+#darkModeToggle{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+}

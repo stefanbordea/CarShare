@@ -1,0 +1,31 @@
+.dark{
+    background-color: #141514;
+    color: white;
+}
+.dark .card{
+    background-color: #141514;
+    color: white;
+    border-color: #6A66A3;
+}
+.dark .card-body{
+    border: 1px solid #6A66A3;
+    color: white;
+    background-color: #1B1725;
+}
+
+.dark .link{
+    color: white !important;
+}
+
+.dark #searchButton{
+    background-color: #b3b3f1;
+    color: black;
+}
+
+.dark #tab[aria-selected="true"]{
+    background-color: #6A66A3;
+}
+
+.dark .profileTab{
+    background-color: #B3B3F1;
+}
