@@ -13,7 +13,7 @@ require_once '../App/config/config.php';
 
 //Autoloader (no need for require every time)
 spl_autoload_register(function ($class) {
-    $root = dirname(__DIR__);   // get the parent directory
+    $root = dirname(__DIR__); // get the parent directory
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
     if (is_readable($file)) {
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
@@ -38,6 +38,12 @@ $router->add('', ['controller' => 'Home', 'action' => 'index']);
 $router->add('signup', ['controller' => 'Signup', 'action' => 'signup']);
 $router->add('login', ['controller' => 'Login', 'action' => 'login']);
 $router->add('logout', ['controller' => 'Login', 'action' => 'destroy']);
+$router->add('browse', ['controller' => 'Browse', 'action' => 'browse']);
+$router->add('about', ['controller' => 'About', 'action' => 'about']);
+$router->add('createListing', ['controller' => 'Vehicles', 'action' => 'vehicleForm']);
+$router->add('profile', ['controller' => 'Profile', 'action' => 'profile']);
+$router->add('privacy', ['controller' => 'Privacy', 'action' => 'privacy']);
+$router->add('terms', ['controller' => 'Terms', 'action' => 'terms']);
 $router->add('password/reset/{token:[\da-f]+}', ['controller' => 'Password', 'action' => 'reset']);
 //$router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
 //$router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);

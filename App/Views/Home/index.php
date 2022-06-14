@@ -47,7 +47,7 @@ use App\Authentication;
           <div class="card-body">
             <h4 class="card-title">City</h4>
             <p class="card-text">Move around the city with no hassle</p>
-            <a href="Browse/browse" class="btn btn-primary">View Category</a>
+            <a href="/browse" class="btn btn-primary">View Category</a>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ use App\Authentication;
           <div class="card-body">
             <h4 class="card-title">Long-range</h4>
             <p class="card-text">Ideal for travel and business</p>
-            <a href="Browse/browse" class="btn btn-primary">View Category</a>
+            <a href="/browse" class="btn btn-primary">View Category</a>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ use App\Authentication;
           <div class="card-body">
             <h4 class="card-title">Lux</h4>
             <p class="card-text">Flex all you want</p>
-            <a href="Browse/browse" class="btn btn-primary">View Category</a>
+            <a href="/browse" class="btn btn-primary">View Category</a>
           </div>
         </div>
       </div>

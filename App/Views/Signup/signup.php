@@ -2,10 +2,10 @@
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
 
-if(!empty($user->errors)){
+if (!empty($user->errors)) {
     echo "<p class='login-title'>Errors:</p>";
     echo "<ul class='login-title'>";
-    foreach ($user->errors as $error){
+    foreach ($user->errors as $error) {
 
         echo "<li class='login-title'>$error</li>";
     }
@@ -50,7 +50,7 @@ if(!empty($user->errors)){
                                 <button class="btn btn-primary">Sign up</button>
                                 <br>
                                 <br>
-                                <a href="../Login/login" class="link">Already have an account? Login!</a>
+                                <a href="/login" class="link">Already have an account? Login!</a>
                             </div>
                         </form>
                     </div>
