@@ -128,6 +128,8 @@ use App\Authentication;
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
 
         </div>
+        </div>
+        </div>
 
         <?php // foreach($license as $license) { 
         ?>
