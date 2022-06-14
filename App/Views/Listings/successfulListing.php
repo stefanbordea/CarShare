@@ -10,7 +10,7 @@ require '../App/Views/common/navigation.php';
     <img src="/images/sitback.jpg" alt="" id="sitback">
     </div>
 
-<h1>Success! Thank you for listing your car.</h1>
+
 
 <?php
 require '../App/Views/common/footer.php';
