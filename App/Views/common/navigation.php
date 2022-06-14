@@ -18,6 +18,8 @@
                         <a href="/Login/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
                         <a href="/Signup/signup"><button type="button" class="btn btn-warning">Sign-up</button></a>
                     <?php }?>
+                    <img src="/images/toggle.png" width="30" height="30" id="darkModeToggle" class="darkModeToggle"></img>
+                    <label for="darkModeToggle">
                 </div>
             </div>
         </div>
@@ -42,7 +44,7 @@
                     <h5 class="h1 text-white">Something</h5>
                     <p class="small ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                     <p class="small mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">www.carshare.com</a></p>
-
+                    <script src="/js/darkMode.js"></script>
                 </div>
 
             </div>
