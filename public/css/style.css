@@ -1,11 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /*HOME PAGE STYLING*/
 .carousel {
     width: 800px;
     margin: auto;
     align-content: center;
     justify-content: center;
-
-
 }
 
 .carousel-inner .carousel-item img {
@@ -28,9 +31,6 @@
     margin-bottom: 10em;
     display: flex;
     justify-content: center;
-
-  
-  
 }
 
 .login-title {
@@ -95,27 +95,9 @@ html {
     height: 100%;
 }
 
-body {
-    /* eprepe na to valw relative gia to footer - an vroume allon tropo to allazoume
-     dokimasa na to valw sto #footerId kai #footerContainer kai den doulepse*/
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-
-    padding: 0;
-}
-
-
 .form-control {
     margin: 0 auto;
 }
-
-/*.form-control{*/
-/*    width:30%;*/
-/*    margin:0 auto;*/
-/*}*/
 
 .formLabel {
     display: block;
@@ -124,47 +106,63 @@ body {
 
 .datepicker {
     width: 30%;
-
 }
 
-#footerID {
-    position: absolute;
+.formBox{
+    display: block;
+    height:65vh;
+}
+
+#formBox{
+    display: block;
+    height:68.9vh;
+}
+
+footer {
+    width: 100%;
     padding: 0;
-    margin: 0;
     height: 160px !important;
-    background-color: #1B1725;
-    bottom: 0;
 }
 
 .footerContainer {
-    padding-left: 3em;
-    bottom: 0;
-
+    margin-bottom: 0;
 }
 
 .footer {
-    margin-top: auto;
-    height: 100% !important;
-    bottom: 0;
+    width: 100%;
+    position: relative;
+    background-color: #1B1725;
+    display: inline-block;
 }
 
 
 .footerRight {
     color: white;
     bottom: 0;
-
     position: absolute;
-    right: 1em;
-    align-content: center;
-    padding-bottom: 1em;
-
+    left: 43%;
 }
 
+.footerNavigation{
+    display: inline;
+    margin-bottom: 0;
+    padding: 0;
+}
 
-.footerLeft {}
+footerLinks{
+    display:inline;
+    margin-left: 1em;
+}
 
 .footerLeft a {
-    display: block;
+    margin-left: 1em;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 0;
+    display: inline-block;
+}
+.footerLeft a:hover{
+    color: pink !important;
 }
 
 
@@ -230,11 +228,17 @@ h3#Disclaimer {
     margin: 0 auto;
     padding-top: 1em;
 }
-
-#browseContainer {
-    /*width:50%;*/
+ 
+/* #browseCardContainer {
     padding-bottom: 2.5rem;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+} */
 
+#carListingsRow{
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #listingTitle {
@@ -267,10 +271,10 @@ h3#Disclaimer {
     border: 3px solid black;
 }
 
-
 .pagin {
     margin-bottom: 10em;
 }
+
 .aboutUs{
     height:100vh;
     display:flex;
@@ -295,20 +299,18 @@ h3#Disclaimer {
 }
 
 #browseCards {
-
     margin-top: 20px;
     margin-bottom: 10px;
     margin-left: 15%;
     display: inline-block;
     width: 18rem;
     height: 24rem;
-
 }
 
-#browseCards img {
+/* #browseCards img {
 
     height: 12rem;
-}
+} */
 
 
 

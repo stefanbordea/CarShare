@@ -1,11 +1,12 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
 
-if(!empty($user->errors)){
+if (!empty($user->errors)) {
     echo "<p class='login-title'>Errors:</p>";
     echo "<ul class='login-title'>";
-    foreach ($user->errors as $error){
+    foreach ($user->errors as $error) {
 
         echo "<li class='login-title'>$error</li>";
     }
@@ -40,3 +41,8 @@ if(!empty($user->errors)){
         </div>
     </div>
 </section>
+
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>

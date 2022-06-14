@@ -1,3 +1,4 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
@@ -65,6 +66,9 @@ require '../App/Views/common/navigation.php';
 
 
 </div>
+<?php
+require '../App/Views/common/footer.php';
+?>
 
 
 
@@ -74,3 +78,4 @@ require '../App/Views/common/navigation.php';
 <script>
 
 </script>
+</html>
