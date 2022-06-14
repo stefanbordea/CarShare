@@ -13,6 +13,16 @@ if (!empty($user->errors)) {
 }
 
 ?>
+
+<head>
+    <style>
+        #signupPasswordRow{
+            margin-bottom: 10em;
+        }
+    </style>
+    <script src="/js/showHidePassword.js"></script>
+</head>
+
 <h1 class="login-title">Sign up</h1>
 <!--<form action="/signup/create" method="post">-->
 <!--    <div>-->
@@ -35,7 +45,7 @@ if (!empty($user->errors)) {
 
 <section>
     <div class="container mt-5 pt-5">
-        <div class="row">
+        <div class="row" id="signupPasswordRow">
             <div class="col-12 col-sm-7 col-md-6 m-auto">
                 <div class="card border-0 shadow">
                     <div class="card-body">
@@ -45,6 +55,7 @@ if (!empty($user->errors)) {
                             <input type="email" name="email" id="email" class="form-control my-4 py-2" placeholder="E-mail" autofocus value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" required/>
                             <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimum 8 chars, at least one letter and one number"/>
                             <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control my-4 py-2" placeholder="Repeat password"  required/>
+                            <img src="/images/eye-red.png" height="18" id="eyeimg1" onmousedown="flipEyeImg(this, true)" onmouseup="flipEyeImg(this, false)">
 
                             <div class="text-center mt-3">
                                 <button class="btn btn-primary">Sign up</button>

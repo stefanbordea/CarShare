@@ -8,7 +8,7 @@ require '../App/Views/common/navigation.php';
 
 
     <div>
-        <label for="pricePerDay">Price per pay</label>
+        <label for="pricePerDay">Price per day</label>
         <input type="number" id="pricePerDay" name="pricePerDay">
     </div>
 

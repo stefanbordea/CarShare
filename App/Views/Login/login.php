@@ -2,6 +2,11 @@
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
 ?>
+
+<head>
+    <script src="/js/showHidePassword.js"></script>
+</head>
+
 <h1 class="login-title">Log in</h1>
 
 
@@ -32,6 +37,7 @@ require '../App/Views/common/navigation.php';
                         <form action="/login/create" method="post">
                             <input type="email" name="email" id="email" class="form-control my-4 py-2" placeholder="E-mail" autofocus value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" required/>
                             <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" />
+                            <img src="/images/eye-red.png" height="20" id="eyeimg1"onmousedown="flipEyeImg(this, true)" onmouseup="flipEyeImg(this, false)">
                             <div class="text-center mt-3">
                                 <button class="btn btn-primary">Login</button>
                                 <br>

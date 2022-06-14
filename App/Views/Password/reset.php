@@ -13,6 +13,11 @@ if(!empty($user->errors)){
 }
 
 ?>
+
+<head>
+    <script src="/js/showHidePassword.js"></script>
+</head>
+
 <h1>Reset password</h1>
 <form method="post" id="formPassword" action="/password/reset-password">
 
@@ -21,6 +26,7 @@ if(!empty($user->errors)){
     <div>
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimum 8 chars, at least one letter and one number">
+        <img src="/images/eye-red.png" height="20" id="eyeimg1"onmousedown="flipEyeImg(this, true)" onmouseup="flipEyeImg(this, false)">
     </div>
 
 <!--    <div>-->
