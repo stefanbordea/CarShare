@@ -17,7 +17,7 @@ if (!empty($user->errors)) {
 <h1 class="login-title">Change Password</h1>
 
 <section>
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5" id="formBox">
         <div class="row">
             <div class="col-12 col-sm-7 col-md-6 m-auto">
                 <div class="card border-0 shadow">

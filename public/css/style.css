@@ -118,6 +118,10 @@ html {
     height:68.9vh;
 }
 
+.nav-tabs{
+    margin-left: 5em;
+}
+
 footer {
     width: 100%;
     padding: 0;
@@ -298,6 +302,10 @@ h3#Disclaimer {
     margin-bottom: 10em;
 }
 
+#profileTabs{
+    align-self: center;
+}
+
 #browseCards {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -324,8 +332,6 @@ h3#Disclaimer {
     display: inline-block;
     font-size: 2rem;
 }
-
-
 
 #searchbar {
 

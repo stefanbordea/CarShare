@@ -6,7 +6,7 @@ require '../App/Views/common/navigation.php';
 ?>
 
 <h1>Enter vehicle infromation</h1>
-<form action="/vehicles/addNew" method="post" enctype="multipart/form-data">
+<form action="/vehicles/addNew" method="post" enctype="multipart/form-data" id="formBox">
     <div>
         <label for="brand">Vehicle Brand</label>
         <input type="text" id="brand"  name="brand">

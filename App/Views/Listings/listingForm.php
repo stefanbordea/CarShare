@@ -5,7 +5,7 @@ require '../App/Views/common/navigation.php';
 
 ?>
 <h1>Create Listing</h1>
-<form action="/listings/addNew" method="post" enctype="multipart/form-data">
+<form action="/listings/addNew" method="post" enctype="multipart/form-data" id="formBox">
 
 
     <div>
