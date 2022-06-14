@@ -7,7 +7,7 @@ require '../App/Views/common/navigation.php';
     <form action="/browse/searchListings" method="GET" class="form">
         Search for a specific make or model:
         <input type="text" name="query" id="searchbar" />
-        <input type="submit" value="Search" class="form-btn" />
+        <input type="submit" value="Search" class="form-btn" id="searchButton" />
     </form>
 </div>
 

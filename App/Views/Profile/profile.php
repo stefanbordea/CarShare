@@ -8,13 +8,13 @@ use App\Authentication;
 </head>
     <ul class="nav nav-tabs" id="profileTabs" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Profile</button>
+            <button class="nav-link active profileTab" id="tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Profile</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab" data-bs-toggle="tab" data-bs-target="#listings" type="button" role="tab" aria-controls="listings" aria-selected="false">My Listings</button>
+            <button class="nav-link profileTab" id="tab" data-bs-toggle="tab" data-bs-target="#listings" type="button" role="tab" aria-controls="listings" aria-selected="false">My Listings</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+            <button class="nav-link profileTab" id="tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">

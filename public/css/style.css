@@ -346,3 +346,9 @@ h3#Disclaimer {
 .form-btn:hover {
     background-color: #B3B3F1;
 }
+
+#darkModeToggle{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+}
