@@ -1,3 +1,4 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
@@ -55,3 +56,15 @@ require '../App/Views/common/navigation.php';
 
             
 </body>
+    <div>
+        <input type="hidden" id="vehicleID" name="vehicleID" value="<?php echo $vehicleID ?>">
+    </div>
+
+
+    <button type="submit">Submit</button>
+</form>
+
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>

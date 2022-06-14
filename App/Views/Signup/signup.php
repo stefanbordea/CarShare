@@ -1,3 +1,4 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
@@ -13,6 +14,7 @@ if (!empty($user->errors)) {
 }
 
 ?>
+<<<<<<< Updated upstream
 
 <head>
     <style>
@@ -22,6 +24,10 @@ if (!empty($user->errors)) {
     </style>
     <script src="/js/showHidePassword.js"></script>
 </head>
+=======
+<body>
+    
+>>>>>>> Stashed changes
 
 <h1 class="login-title">Sign up</h1>
 <!--<form action="/signup/create" method="post">-->
@@ -45,7 +51,11 @@ if (!empty($user->errors)) {
 
 <section>
     <div class="container mt-5 pt-5">
+<<<<<<< Updated upstream
         <div class="row" id="signupPasswordRow">
+=======
+        <div class="row formBox">
+>>>>>>> Stashed changes
             <div class="col-12 col-sm-7 col-md-6 m-auto">
                 <div class="card border-0 shadow">
                     <div class="card-body">
@@ -70,3 +80,9 @@ if (!empty($user->errors)) {
         </div>
     </div>
 </section>
+</body>
+
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>

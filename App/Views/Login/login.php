@@ -1,3 +1,4 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
@@ -28,7 +29,7 @@ require '../App/Views/common/navigation.php';
 
 <section>
     <div class="container mt-5 pt-5">
-        <div class="row">
+        <div class="row formBox">
             <div class="col-12 col-sm-7 col-md-6 m-auto">
                 <div class="card border-0 shadow">
                     <div class="card-body">
@@ -51,3 +52,8 @@ require '../App/Views/common/navigation.php';
         </div>
     </div>
 </section>
+
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>

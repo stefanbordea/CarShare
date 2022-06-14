@@ -1,3 +1,4 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
@@ -88,3 +89,7 @@ use App\Authentication;
 
 <?php // foreach($license as $license) { 
 ?>
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>

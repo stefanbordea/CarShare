@@ -1,3 +1,4 @@
+<html>
 <?php
 
 require '../App/Views/common/head.php';
@@ -129,21 +130,16 @@ foreach($listings as $listing){
         </div>
 
     </div>
-
-
-
-
 </div>
 
-
+<?php
+}
+}
+?>
 
 
 <?php
-    }
-
-
-}
-
+require '../App/Views/common/footer.php';
 ?>
-
+</html>
 

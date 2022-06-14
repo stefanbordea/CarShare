@@ -85,4 +85,8 @@ use App\Authentication;
   </div>
   <script src="/js/cookie.js"></script>
 </body>
+
+<?php
+require '../App/Views/common/footer.php';
+?>
 </html>

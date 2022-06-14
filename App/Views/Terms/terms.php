@@ -1,9 +1,8 @@
+<html>
 <?php
 require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
 ?>
-
-<html>
 
 <body id="termsBody">
 
@@ -240,3 +239,7 @@ require '../App/Views/common/navigation.php';
 
 
 </body>
+<?php
+require '../App/Views/common/footer.php';
+?>
+</html>
