@@ -44,6 +44,7 @@ $router->add('createListing', ['controller' => 'Vehicles', 'action' => 'vehicleF
 $router->add('profile', ['controller' => 'Profile', 'action' => 'profile']);
 $router->add('privacy', ['controller' => 'Privacy', 'action' => 'privacy']);
 $router->add('terms', ['controller' => 'Terms', 'action' => 'terms']);
+$router->add('edit', ['controller' => 'Profile', 'action' => 'edit']);
 $router->add('password/reset/{token:[\da-f]+}', ['controller' => 'Password', 'action' => 'reset']);
 //$router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
 //$router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);
