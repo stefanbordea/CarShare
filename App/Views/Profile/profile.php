@@ -22,16 +22,6 @@ use App\Authentication;
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6" id="firstColumn">
-                            First Name:
-                    </div>
-                    <div class="col-md-6" id="secondColumn">
-                        <?php foreach($license as $license) : echo $license['fname']; ?>
-                    </div>
-
-
         <div class="container">
             <div class="row">
                 <div class="col-md-6" id="firstColumn">
@@ -40,9 +30,8 @@ use App\Authentication;
                 <div class="col-md-6" id="secondColumn">
                     <?php foreach ($license as $license) : echo $license['fname']; ?>
                 </div>
-
-
             </div>
+
             <div class="row">
                 <div class="col-md-6" id="firstColumn">
                     Last Name:
@@ -99,8 +88,3 @@ use App\Authentication;
 
 <?php // foreach($license as $license) { 
 ?>
-<!--    <h3> Hello, --><?php //echo $license['fname'] . " ". $license['lname'];
-                        ?>
-<!--</h3>-->
-<!--    --><?php //}
-            ?>
