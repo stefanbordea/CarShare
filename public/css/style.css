@@ -365,6 +365,7 @@ h3#Disclaimer {
     margin-bottom: 10rem;
     justify-content: center;
     font-size: 18px;
+    
 
 
 }
@@ -378,13 +379,15 @@ h3#Disclaimer {
 }
 
 .veh-img {
-    width: 380px;
-    height: 250px;
+    width: 25em;
+    height: 16em;
 
 }
 
 .promote-listing {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
 
 }
