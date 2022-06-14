@@ -53,17 +53,5 @@ require '../App/Views/common/navigation.php';
                 <input type="text" id="description" name="description" placeholder="Description...">
             </div> -->
 
-                <div>
-                    Select image to upload:
-                    <input type="file" name="fileToUpload" id="image">
-                </div>
-
-                <div>
-                    <input type="hidden" id="vehicleID" name="vehicleID" value="<?php echo $vehicleID ?>">
-                </div>
-
-
-                <button type="submit">Submit</button>
-        </form>
-    </div>
+            
 </body>

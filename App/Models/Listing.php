@@ -16,7 +16,7 @@ class Listing extends \Core\Model
 
     public function save() {
         $userID = $_SESSION['user_id'];
-        $sql = 'INSERT INTO listing (userID, vehicleID, description, pricePerDay, pickupLocation, returnLocation, photoLink)
+        $sql = 'INSERT INTO Listing (userID, vehicleID, description, pricePerDay, pickupLocation, returnLocation, photoLink)
                 VALUES (:userID, :vehicleID, :description, :pricePerDay, :pickupLocation, :returnLocation, :photoLink)';
         $db = static::getDB();
         $stmt = $db->prepare($sql);

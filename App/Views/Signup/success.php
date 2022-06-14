@@ -4,3 +4,4 @@
 ?>
 
 <h1>Success! Thank you for signing up.</h1>
+<p>Click <a href="/login">here</a> to log in.</p>
