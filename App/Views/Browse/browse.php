@@ -95,7 +95,7 @@ require '../App/Views/common/navigation.php';
 
 
     $numberOfListings = count($listings);
-    $listingsPerPage = 5;
+    $listingsPerPage = 10;
     $numberOfPages = ceil($numberOfListings / $listingsPerPage);
     $startFrom = ($page - 1) * $listingsPerPage;
     $endAt = $page < $numberOfPages ? $page * $listingsPerPage : $numberOfListings;

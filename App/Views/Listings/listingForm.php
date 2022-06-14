@@ -10,17 +10,17 @@ require '../App/Views/common/navigation.php';
 
     <div>
         <label for="pricePerDay">Price per day</label>
-        <input type="number" id="pricePerDay" name="pricePerDay">
+        <input type="number" id="pricePerDay" name="pricePerDay" required>
     </div>
 
     <div>
         <label for="pickupLocation">Pickup location</label>
-        <input type="text" id="pickupLocation" name="pickupLocation">
+        <input type="text" id="pickupLocation" name="pickupLocation" required>
     </div>
 
     <div>
         <label for="returnLocation">Return location</label>
-        <input type="text" id="returnLocation" name="returnLocation">
+        <input type="text" id="returnLocation" name="returnLocation" required>
     </div>
 
     <div>
@@ -30,7 +30,7 @@ require '../App/Views/common/navigation.php';
 
     <div>
         Select image to upload:
-        <input type="file" name="fileToUpload" id="image">
+        <input type="file" name="fileToUpload" id="image" required>
     </div>
 
     <div>

@@ -25,34 +25,37 @@ class Vehicle extends \Core\Model
         for ($i = 0; $i < 8; $i++) {
             $booleanFeatures[$i] = false;
         }
-        foreach ($this->features as $feature) {
-            switch ($feature) {
-                case 'ABS':
-                    $booleanFeatures[0] = true;
-                    break;
-                case 'ParkingSensor':
-                    $booleanFeatures[1] = true;
-                    break;
-                case 'CruiseControl':
-                    $booleanFeatures[2] = true;
-                    break;
-                case 'GPS':
-                    $booleanFeatures[3] = true;
-                    break;
-                case 'Turbo':
-                    $booleanFeatures[4] = true;
-                    break;
-                case 'RearCamera':
-                    $booleanFeatures[5] = true;
-                    break;
-                case 'Bluetooth':
-                    $booleanFeatures[6] = true;
-                    break;
-                case 'AirCondition':
-                    $booleanFeatures[7] = true;
-                    break;
+        if (!empty($this->features)) {
+            foreach ($this->features as $feature) {
+                switch ($feature) {
+                    case 'ABS':
+                        $booleanFeatures[0] = true;
+                        break;
+                    case 'ParkingSensor':
+                        $booleanFeatures[1] = true;
+                        break;
+                    case 'CruiseControl':
+                        $booleanFeatures[2] = true;
+                        break;
+                    case 'GPS':
+                        $booleanFeatures[3] = true;
+                        break;
+                    case 'Turbo':
+                        $booleanFeatures[4] = true;
+                        break;
+                    case 'RearCamera':
+                        $booleanFeatures[5] = true;
+                        break;
+                    case 'Bluetooth':
+                        $booleanFeatures[6] = true;
+                        break;
+                    case 'AirCondition':
+                        $booleanFeatures[7] = true;
+                        break;
+                }
             }
         }
+
         $stmt->bindValue(':brand', $this->brand, PDO::PARAM_STR);
         $stmt->bindValue(':model', $this->model, PDO::PARAM_STR);
         $stmt->bindValue(':year', $this->year, PDO::PARAM_INT);

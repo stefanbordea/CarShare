@@ -60,7 +60,7 @@ use App\Authentication;
             </div>
 
         </div>
-        <div class="tab-pane fade" id="listings" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane" id="listings" role="tabpanel" aria-labelledby="home-tab">
 
 
 
@@ -68,7 +68,7 @@ use App\Authentication;
                 if($_SESSION['user_id'] == $listing['userID']){
             $url = "/Listings/index?id=".$listing['vehicleID'];
             ?>
-            <div class="card" style="width: 18rem;" method="GET" >
+            <div class="card" style="width: 18rem;" method="GET" id="profileCards">
                 <img src="../images/<?php echo  $listing['photoLink']?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $vehicles[$listing['vehicleID']]['brand'] . ' ' . $vehicles[$listing['vehicleID']]['model'] ?></h5>
