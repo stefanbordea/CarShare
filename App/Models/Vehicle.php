@@ -15,7 +15,7 @@ class Vehicle extends \Core\Model
     }
 
     public function save() {
-        $sql = 'INSERT INTO vehicle (brand, model, year, typeOfFuel, ABS, ParkingSensor, CruiseControl, GPS, Turbo,
+        $sql = 'INSERT INTO Vehicle (brand, model, year, typeOfFuel, ABS, ParkingSensor, CruiseControl, GPS, Turbo,
                      RearCamera, Bluetooth, AirCondition)
                 VALUES (:brand, :model, :year, :typeOfFuel, :abs, :parkingSensor, :cruiseControl, :gps, :turbo, 
                         :rearCamera, :bluetooth, :airCondition)';

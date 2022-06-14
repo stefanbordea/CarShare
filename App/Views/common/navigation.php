@@ -41,8 +41,8 @@
                     </ul>
                 </div>
                 <div class="footerRight">
-                    <h5 class="h1 text-white">Something</h5>
-                    <p class="small ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <h5 class="h1 text-white">CarShare</h5>
+                    <p class="small ">Share your car, earn money!</p>
                     <p class="small mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">www.carshare.com</a></p>
                     <script src="/js/darkMode.js"></script>
                 </div>
