@@ -122,6 +122,10 @@ html {
     height:68.9vh;
 }
 
+.nav-tabs{
+    margin-left: 5em;
+}
+
 footer {
     width: 100%;
     padding: 0;
@@ -302,6 +306,10 @@ h3#Disclaimer {
 
 .tab-content {
     margin-bottom: 10em;
+}
+
+#profileTabs{
+    align-self: center;
 }
 
 #browseCards {

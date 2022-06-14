@@ -7,6 +7,8 @@ require '../App/Views/common/navigation.php';
 
 <body id="list-container">
 
+<form action="/listings/addNew" method="post" enctype="multipart/form-data" id="formBox">
+
 
     <h3>You are nearly there!</h3>
     <div class="listform">

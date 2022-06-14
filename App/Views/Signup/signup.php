@@ -16,7 +16,7 @@ if (!empty($user->errors)) {
 ?>
 <body>
     
-<h1 class="login-title">Sign up</h1>
+<!-- <h1 class="login-title">Sign up</h1> -->
 <!--<form action="/signup/create" method="post">-->
 <!--    <div>-->
 <!--        <label for="email">Email address</label>-->

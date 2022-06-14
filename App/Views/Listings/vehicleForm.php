@@ -13,7 +13,7 @@ require '../App/Views/common/navigation.php';
     <img src="/images/passive-income.jpg" alt="" class="veh-img">
 </span>
 <div class="vehform-container">
-    <form action="/vehicles/addNew" method="post" enctype="multipart/form-data">
+    <form action="/vehicles/addNew" method="post" enctype="multipart/form-data" id="formBox">>
         <div class="row mb-3">
             <div class="col" style="font-size:20px;">
                 <p>Step 1: Enter your vehicle information:</po>
@@ -24,6 +24,12 @@ require '../App/Views/common/navigation.php';
                     <label class="col-sm-2 col-form-label" for="brand">Vehicle Brand</label>
                     <input type="text" id="brand" name="brand">
                 </div>
+<!-- <h1>Enter vehicle infromation</h1>
+<form action="/vehicles/addNew" method="post" enctype="multipart/form-data" id="formBox">
+    <div>
+        <label for="brand">Vehicle Brand</label>
+        <input type="text" id="brand"  name="brand">
+    </div> -->
 
                 <div class="input-box">
                     <label class="col-sm-2 col-form-label" for="model">Vehicle Model</label>

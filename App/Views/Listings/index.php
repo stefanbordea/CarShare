@@ -8,7 +8,7 @@ require '../App/Views/common/navigation.php';
     <script src="/js/script.js"></script>
   </head>
 
-<div class="container" id="browseContainer">
+<div class="container" id="browseContainer" class="formBox">
 <?php
 $passedId =$_GET['id'];
 foreach($listings as $listing){
