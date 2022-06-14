@@ -14,6 +14,11 @@ if (!empty($user->errors)) {
 }
 
 ?>
+
+<head>
+    <script src="/js/showHidePassword.js"></script>
+</head>
+
 <body>
     
 <!-- <h1 class="login-title">Sign up</h1> -->

@@ -27,29 +27,33 @@ require '../App/Views/common/navigation.php';
 <!-- <h1>Enter vehicle infromation</h1>
 <form action="/vehicles/addNew" method="post" enctype="multipart/form-data" id="formBox">
     <div>
-        <label for="brand">Vehicle Brand</label>
-        <input type="text" id="brand"  name="brand">
-    </div> -->
+        <label for="brand">Vehicle Brand</label>-->
+        <input type="text" id="brand"  name="brand" required>
+    </div>
 
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for="model">Vehicle Model</label>
-                    <input type="text" id="model" name="model">
-                </div>
-
-
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for="year">Year</label>
-                    <input type="number" id="year" name="year">
-                </div>
+    <div>
+        <label for="model">Vehicle Model</label>
+        <input type="text" id="model"  name="model" required>
+    </div>
 
 
-                <div>
-                    Type of fuel:
-                    <input type="radio" name="typeOfFuel" value="Gas">Gas
-                    <input type="radio" name="typeOfFuel" value="Diesel">Diesel
-                    <input type="radio" name="typeOfFuel" value="LPG">LPG
-                    <input type="radio" name="typeOfFuel" value="Gas">Electric
-                </div>
+    <div>
+        <label for="year">Year</label>
+        <input type="number" id="year" name="year" min="1960" max="2022" required>
+    </div>
+
+    <br>
+    <div>
+        Type of fuel:
+        <input type="radio" name="typeOfFuel" value="Gas" required>Gas
+        <input type="radio" name="typeOfFuel" value="Diesel">Diesel
+        <input type="radio" name="typeOfFuel" value="LPG">LPG
+        <input type="radio" name="typeOfFuel" value="Gas">Electric
+    </div>
+    <br>
+
+
+              
             </div>
 
             <div class="col" id="extras">

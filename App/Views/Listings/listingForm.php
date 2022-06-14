@@ -15,45 +15,44 @@ require '../App/Views/common/navigation.php';
         <form action="/listings/addNew" method="post" enctype="multipart/form-data">
             <div class="col-md-6">
 
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for="pricePerDay">Price per pay (in Euros €)</label>
-                    <input type="text" id="pricePerDay" name="pricePerDay">
-                </div>
+              
 
-
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for=" pickupLocation">Pickup location</label>
-                    <input type="text" id=" pickupLocation" name="pickupLocation">
-                </div>
-
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for="pricePerDay">Return location</label>
-                    <input type="text" id="returnLocation" name="returnLocation">
-                </div>
-
-                <div class="input-box">
-                    <label class="col-sm-2 col-form-label" for="pricePerDay">Description</label>
-                    <input type="text" id="description" name="description">
-                </div>
-
-                <div>
-                    Select image to upload:
-                    <input type="file" name="fileToUpload" id="image">
-                </div>
-
-                <div>
-                    <input type="hidden" id="vehicleID" name="vehicleID" value="<?php echo $vehicleID ?>">
-                </div>
-
-
-                <button type="submit">Submit</button>
-        </form>
+    <div>
+        <label for="pricePerDay">Price per day</label>
+        <input type="number" id="pricePerDay" name="pricePerDay" required>
     </div>
 
-</body>
+    <div>
+        <label for="pickupLocation">Pickup location</label>
+        <input type="text" id="pickupLocation" name="pickupLocation" required>
+    </div>
+
+    <div>
+        <label for="returnLocation">Return location</label>
+        <input type="text" id="returnLocation" name="returnLocation" required>
+    </div>
+
+    <div>
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" placeholder="Description...">
+    </div>
+
+    <!-- The area for the drag & drop-->
+    <div class="drop-zone">
+        <span class="drop-zone__prompt">Drop image here or click to upload</span>
+        <input type="file" name="fileToUpload" id="image" class="drop-zone__input" required>
+    </div>
+
+    <div>
+        <input type="hidden" id="vehicleID" name="vehicleID" value="<?php echo $vehicleID ?>">
+    </div>
+
+
+    <button type="submit">Submit</button>
+</form>
+
 <?php
 require '../App/Views/common/footer.php';
 ?>
-
 </html>
-
+<script src="/js/drag.js"></script>

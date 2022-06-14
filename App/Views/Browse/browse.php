@@ -7,7 +7,7 @@ require '../App/Views/common/navigation.php';
 <div class="form-container">
     <form action="/browse/searchListings" method="GET" class="form">
         Search for a specific make or model:
-        <input type="text" name="query" id="searchbar" />
+        <input type="text" name="query" id="searchbar" required/>
         <input type="submit" value="Search" class="form-btn" id="searchButton" />
     </form>
 </div>
@@ -95,7 +95,7 @@ require '../App/Views/common/navigation.php';
 
 
     $numberOfListings = count($listings);
-    $listingsPerPage = 5;
+    $listingsPerPage = 10;
     $numberOfPages = ceil($numberOfListings / $listingsPerPage);
     $startFrom = ($page - 1) * $listingsPerPage;
     $endAt = $page < $numberOfPages ? $page * $listingsPerPage : $numberOfListings;
