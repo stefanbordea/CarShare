@@ -4,9 +4,18 @@ require '../App/Views/common/head.php';
 require '../App/Views/common/navigation.php';
 
 ?>
-<h1>Create Listing</h1>
+
+<body id="list-container">
+
 <form action="/listings/addNew" method="post" enctype="multipart/form-data" id="formBox">
 
+
+    <h3>You are nearly there!</h3>
+    <div class="listform">
+        <form action="/listings/addNew" method="post" enctype="multipart/form-data">
+            <div class="col-md-6">
+
+              
 
     <div>
         <label for="pricePerDay">Price per day</label>

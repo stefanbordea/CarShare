@@ -99,10 +99,12 @@ require '../App/Views/common/navigation.php';
     $numberOfPages = ceil($numberOfListings / $listingsPerPage);
     $startFrom = ($page - 1) * $listingsPerPage;
     $endAt = $page < $numberOfPages ? $page * $listingsPerPage : $numberOfListings;
-
+ 
     for ($i = $startFrom; $i < $endAt; $i++) {
         $listing = $listings[$i];
         $url = "/Listings/index?id=" . $listing['vehicleID'];
+
+       
 
     ?>
 
@@ -116,6 +118,7 @@ require '../App/Views/common/navigation.php';
                 </div>
             </div>
         </div>
+      
 
     <?php
     }
@@ -124,6 +127,7 @@ require '../App/Views/common/navigation.php';
     }
     ?>
 </div>
+<p style="margin-left: 0.7em;">Found <?php echo $numberOfListings?> Results</p>
 <nav class="pagin" aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <?php

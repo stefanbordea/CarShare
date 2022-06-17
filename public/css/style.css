@@ -5,24 +5,25 @@ body{
 
 /*HOME PAGE STYLING*/
 .carousel {
-    width: 800px;
+    width: 51em;
     margin: auto;
     align-content: center;
     justify-content: center;
 }
 
 .carousel-inner .carousel-item img {
-    height: 500px;
+    height: 30em;
+    width: 51em;
     margin: auto;
 }
 
 #homeCards {
-    margin-top: 40px;
-    width: 310px;
-    height: 345px;
-    margin-left: 30px;
+    margin-top: 2em;
+    width: 18em;
+    height: 21em;
+    margin-left: 4em;
     border-radius: 5%;
-    
+
 
 }
 
@@ -31,6 +32,9 @@ body{
     margin-bottom: 10em;
     display: flex;
     justify-content: center;
+    /* padding-bottom: 5em; */
+
+
 }
 
 .login-title {
@@ -61,9 +65,9 @@ body{
     right: 0;
     background-color: #1B1725;
     color: white;
-    padding: 0 35px;
-    padding-top: 5px;
-    padding-bottom: 0px;
+    
+    padding-top: 0.3em;
+   
     transition: 400ms;
 
 
@@ -80,14 +84,14 @@ body{
 }
 
 .cookie-btn {
-    font-size: 14px;
+    font-size: 0.9em;
     color: white;
     background-color: #736fb0;
     cursor: pointer;
-    border-top: 2px;
-    margin-left: 15px;
+    border-top: 0.3em;
+    margin-left: 0.5em;
     border: 0;
-    border-radius: 9px;
+    border-radius: 0.3em;
 
 }
 
@@ -185,10 +189,10 @@ footerLinks{
     color: #2a243a;
     /* text-align: center; */
     background-color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 15px;
-
+    padding-top: 0.3em;
+    text-align: center;
+    padding-bottom: 0.3em;
+  
 }
 
 
@@ -202,20 +206,25 @@ h3#Privacy,
 h3#Disclaimer {
     /* color: white; */
     /* text-align: center; */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.4em;
+    margin-right:0.4em;
 }
 
 #termsBody p {
     /* color: white; */
     text-align: justify;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left:  0.4em;
+    margin-right:  0.4em;
+}
+#termsNavbar .container-fluid .navbar-nav{
+    margin:0 auto;
 }
 
 #termsNavbar .container-fluid .navbar-nav>li>a {
     color: white;
-    margin-right: 15px;
+    margin-right: 0.6em;
+   
+    
 }
 
 #termsNavbar .container-fluid .navbar-nav>li>a:hover {
@@ -226,10 +235,9 @@ h3#Disclaimer {
 /*!**************************!*/
 
 
-/*----------BROWSE INDEX ----------*/
+/*----------Listing INDEX ----------*/
 .listingImage {
-    width: 50%;
-    margin: 0 auto;
+    width: 40%;
     padding-top: 1em;
 }
  
@@ -263,37 +271,35 @@ h3#Disclaimer {
     margin-bottom: 10em;
 }
 
-.date {
+/* .date {
     padding-top: 0.7em;
     padding-bottom: 0.7em;
-}
-
-
-#map{
-    width: 30%;
-    height: 30%;
-    border: 3px solid black;
-}
+} */
 
 .pagin {
     margin-bottom: 10em;
 }
+/*-------------------*/
+#map {
+    width: 30%;
+    height: 30%;
+    border: 3px solid black;
+    align-self: center;
+}
 
-.aboutUs{
-    height:100vh;
-    display:flex;
+.aboutUs {
+    height: 100vh;
+    display: flex;
     flex-direction: column;
 
 }
-#aboutUsRow{
-    padding-top:1em;
-    align-self: center;
-}
-#map{
 
+#aboutUsRow {
+    padding-top: 1em;
     align-self: center;
 }
-#emailList{
+
+#emailList {
     list-style: none;
 }
 
@@ -311,9 +317,10 @@ h3#Disclaimer {
     margin-bottom: 10px;
     margin-left: 15%;
     display: inline-block;
-    width: 18rem;
+    width: 17rem;
     height: 24rem;
 }
+/* ------------------------*/
 
 #profileCards{
     margin-top: 20px;
@@ -332,7 +339,7 @@ h3#Disclaimer {
 
 
 .form-container {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: block;
     text-align: center;
 }
@@ -344,8 +351,8 @@ h3#Disclaimer {
 
 #searchbar {
 
-    width: 18rem;
-    height: 40px;
+    width: 7em;
+    height: 1em;
 
 }
 
@@ -354,9 +361,9 @@ h3#Disclaimer {
     color: white;
     border: none;
     border-radius: 5px;
-    height: 35px;
+    height: 1.5em;
     width: 5em;
-    font-size: 20px;
+    font-size: 0.6em;
 
 }
 
@@ -364,6 +371,102 @@ h3#Disclaimer {
     background-color: #B3B3F1;
 }
 
+/* ------------------------*/
+
+/* Vehicle form styling */
+
+.vehform-container {
+
+    padding: 20px 20px;
+    display: flex;
+    margin-bottom: 10rem;
+    justify-content: center;
+    font-size: 18px;
+    
+
+
+}
+
+.veh-container .head {
+    height: 50px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #1B1725;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.veh-img {
+    width: 25em;
+    height: 16em;
+
+}
+
+.promote-listing {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.input-box {
+    margin-bottom: 5px;
+}
+
+.vehsubmit {
+    margin-top: 10px;
+    background-color: #1B1725;
+
+    width: 80px;
+    border-radius: 7px;
+
+    height: 35px;
+    color: white;
+}
+
+.vehsubmit:hover {
+
+    background-color: #9b59b6;
+}
+
+/* ------------------------*/
+
+/* Listing form styling */
+
+#list-container {
+
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}
+
+#list-container h3 {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.listform {
+    background-color: white;
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+.listform .input-box label {
+    width: 200px;
+}
+
+#sitback {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10em;
+}
+
+.content-wwrapper {
+    margin: 0 auto;
+
+}
 #darkModeToggle{
     text-decoration: none;
     background-color: white;
